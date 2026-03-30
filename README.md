@@ -1,6 +1,6 @@
-# LearnCC: Master Claude Code
+# LearnCC: Learn Claude Code
 
-A structured, hands-on Claude Code mastery course delivered as a system prompt. Load it into Claude Code and it becomes your tutor — adapting to your role, tracking your progress, and teaching through practice, not lectures.
+A structured, hands-on Claude Code educational course delivered as a plugin. Install it, type `/learncc`, and it becomes your tutor — adapting to how you work, tracking your progress, and teaching through practice, not lectures.
 
 ## Who This Is For
 
