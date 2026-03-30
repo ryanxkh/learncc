@@ -32,22 +32,22 @@ Total: ~5-8 hours depending on your experience (the course skips what you alread
 ## Quick Start
 
 ### Install from Plugin Marketplace (Recommended)
-```
-/plugin install learncc
-```
-Then type `/learncc` to start the course.
+Once accepted into the official marketplace:
+1. Open Claude Code and type `/plugin`
+2. Search `learncc` in the Discover tab
+3. Press Space to install, Esc to close
+4. Type `/learncc` to start the course
 
-### Install from GitHub
+### Install from GitHub (Available Now)
 ```bash
-# Add the marketplace source (one time)
+# Add the marketplace source (one time, in your terminal BEFORE starting Claude Code)
 claude plugin marketplace add ryanxkh/learncc
-
-# Install the plugin
-/plugin install learncc@ryanxkh-learncc
-
-# Start the course
-/learncc
 ```
+Then start Claude Code and:
+1. Type `/plugin`
+2. Search `learncc` in the Discover tab
+3. Press Space to install, Esc to close
+4. Type `/learncc` to start the course
 
 ### Manual (without plugin install)
 ```bash
