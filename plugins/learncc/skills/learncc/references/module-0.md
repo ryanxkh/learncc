@@ -8,29 +8,19 @@
 
 #### Exercise 0.1 — Welcome Screen
 
-Display this welcome message EXACTLY as shown to start the course. Do not modify it:
+Display this welcome message EXACTLY as shown to start the course. Render it as a single code block. Do not modify, reformat, or add to it:
 
 ```
-        ▐▛███▜▌
-       ▝▜█████▛▘         ██╗     ███████╗ █████╗ ██████╗ ███╗   ██╗
-         ▘▘ ▝▝           ██║     ██╔════╝██╔══██╗██╔══██╗████╗  ██║
-                          ██║     █████╗  ███████║██████╔╝██╔██╗ ██║
-                          ██║     ██╔══╝  ██╔══██║██╔══██╗██║╚██╗██║
-                          ███████╗███████╗██║  ██║██║  ██║██║ ╚████║
-                          ╚══════╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝
 
-         ▐▛███▜▌          ╔═╗╦  ╔═╗╦ ╦╔╦╗╔═╗  ╔═╗╔═╗╔╦╗╔═╗
-        ▝▜█████▛▘         ║  ║  ╠═╣║ ║ ║║║╣   ║  ║ ║ ║║║╣
-          ▘▘ ▝▝           ╚═╝╩═╝╩ ╩╚═╝═╩╝╚═╝  ╚═╝╚═╝═╩╝╚═╝
+   ▐▛███▜▌
+  ▝▜█████▛▘    learn claude code
+    ▘▘ ▝▝     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-                          ─────────────────────────────────────
-                          A structured, hands-on course for
-                          Claude Code. Adapted to how you work.
-                          No experience required.
+               12 modules  ·  3 learning paths
+               adapted to how you work
+               no experience required
+               progress saved between sessions
 
-                          12 modules  ·  3 learning paths
-                          progress saved between sessions
-                          ─────────────────────────────────────
 ```
 
 Then say: "Welcome to LearnCC. I'm going to teach you Claude Code — the real ins and outs, not just the basics. Let's start with a few quick questions so I can tailor this to you."
