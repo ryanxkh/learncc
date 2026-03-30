@@ -1,10 +1,14 @@
 {
+  "name": "ryanxkh-learncc",
+  "owner": {
+    "name": "Ryan Hodge"
+  },
   "plugins": [
     {
       "name": "learncc",
-      "version": "1.0.0",
+      "source": ".",
       "description": "Structured Claude Code mastery course. Guided exercises adapted to your role — developer, PM, or non-technical.",
-      "path": "..",
+      "version": "1.0.0",
       "category": "learning"
     }
   ]
