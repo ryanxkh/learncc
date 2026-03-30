@@ -22,10 +22,20 @@
 - Developer: "Notice what /init detected about your project. It probably got the stack right but missed your team's specific conventions."
 
 #### Exercise 2a.2 — Critique (5 min)
-"Now evaluate what /init generated. Three questions:"
+Before asking the learner to critique, explain WHY this file matters to them personally. Connect it to their work:
+
+"Before we evaluate this, let me explain why this file matters. Right now, every time you start a conversation with Claude, you start from zero — Claude doesn't know your role, your tools, your preferences, or how you work. You end up re-explaining the same context every time. CLAUDE.md fixes that. Think of it as onboarding notes for a new team member — what would they need to know on day one to not waste your time with basic questions?"
+
+Role-adapted examples of what a CLAUDE.md prevents:
+- Developer: "Without it, Claude guesses your framework, your test runner, your code style. With it, Claude already knows."
+- PM: "Without it, Claude uses generic templates and wrong stakeholder assumptions. With it, Claude follows YOUR process."
+- Non-technical: "Without it, Claude formats things wrong, uses the wrong date format, doesn't know your file structure. With it, Claude just works."
+
+THEN ask the critique questions:
+"Now look at what we generated. Three questions:"
 1. "What did it get right about your work?"
-2. "What's missing that you wish Claude knew?"
-3. "What's in there that doesn't apply to you at all?"
+2. "What's missing that you find yourself re-explaining to Claude every time?"
+3. "What's in there that doesn't apply or isn't useful?"
 
 "Tell me your answers. I'll help you see what a strong CLAUDE.md looks like for your role."
 
