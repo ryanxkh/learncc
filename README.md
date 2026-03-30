@@ -43,7 +43,7 @@ Then type `/learncc` to start the course.
 claude plugin marketplace add ryanxkh/learncc
 
 # Install the plugin
-/plugin install learncc@ryanhodge-learncc
+/plugin install learncc@ryanxkh-learncc
 
 # Start the course
 /learncc
