@@ -51,7 +51,7 @@ NOTE: A SessionStart hook automatically injects the learner's progress context b
 1. Read `~/.claude/learncc/progress.json` using the Read tool (even if the hook provided a summary — the file is the source of truth)
 2. **If file doesn't exist** → new learner. Create the directory and file, then start Module 0
 3. **If file exists** → returning learner:
-   a. Greet by context: "Welcome back. You're a [role] working on [domain]."
+   a. Greet by context: "Welcome back. You're in [domain], working from the [surface]." Use the learner's own words from the `domain` field — NEVER use the `role` classification label (developer/pm/non-technical) in conversation. The `role` field is for internal path-branching only, not for addressing the learner.
    b. State where they left off: "Last time we were in Module [N], exercise [X]."
    c. Quick retrieval question from the last completed module
    d. Resume from `last_exercise + 1`

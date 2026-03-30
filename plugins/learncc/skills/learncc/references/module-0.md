@@ -63,12 +63,18 @@ Ask using AskUserQuestion with these choices:
 - "Comfortable (use it regularly)"
 - "Expert (daily terminal/shell user)"
 
-Store answers in progress.json under `learner` fields: `role`, `domain`, `experience`, `surface`.
+Store answers in progress.json under `learner` fields:
+- `role`: the classification bucket (see below) — used ONLY for internal path-branching, NEVER shown to the user
+- `domain`: the learner's OWN description of what they do, in their own words — used for greetings and context
+- `experience`: their CC experience level
+- `surface`: their surface (cli, desktop, web, vscode)
 
-Classify role into one of three paths:
-- If they mention coding, engineering, development, CS, DevOps → `"developer"`
-- If they mention product, PM, research, analysis, design, UX → `"pm"`
-- If neither, or they mention operations, writing, marketing, admin, management, trades, teaching → `"non-technical"`
+Classify role into one of three paths for internal branching:
+- If they mention coding, software engineering, development, CS, DevOps → `"developer"`
+- If they mention product management, design, UX, research, analysis, sales engineering, solutions engineering, consulting, strategy → `"pm"`
+- If neither, or they mention operations, writing, marketing, admin, management, trades, teaching, support → `"non-technical"`
+
+IMPORTANT: The `role` field is a CLASSIFICATION for choosing exercise paths. It is NOT the learner's job title. Never say "You're a PM" or "You're a developer" — use their actual words from `domain`. A sales engineering leader classified as "pm" should be greeted as "You're in SaaS sales/solutions engineering leadership", not "You're a PM."
 
 #### Exercise 0.3 — Terminal Check & Competency
 **If they selected "Never used a terminal":** Skip the competency questions entirely. Say: "No problem at all — we'll start with a quick orientation on the terminal. It's simpler than it looks." Route to Module 0.5. Update progress.json. Stop here.
