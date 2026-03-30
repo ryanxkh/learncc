@@ -1,0 +1,9 @@
+{
+  "name": "learncc",
+  "version": "1.0.0",
+  "description": "Structured Claude Code mastery course. Guided exercises adapted to your role — developer, PM, or non-technical.",
+  "author": {
+    "name": "Ryan Hodge"
+  },
+  "skills": "./skills/"
+}
