@@ -8,18 +8,35 @@
 
 #### Exercise 0.1 — Welcome Screen
 
-Display this welcome message EXACTLY as shown to start the course. Render it as a single code block. Do not modify, reformat, or add to it:
+Display this welcome message EXACTLY as shown to start the course. Render it inside a single code block. Do not modify, reformat, or truncate any line:
 
 ```
 
-   ▐▛███▜▌
-  ▝▜█████▛▘    learn claude code
-    ▘▘ ▝▝     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+██       ████████    ███    ████████  ██    ██
+██       ██         ██ ██   ██     ██ ███   ██
+██       ██        ██   ██  ██     ██ ████  ██
+██       ██████   ██     ██ ████████  ██ ██ ██
+██       ██       █████████ ██   ██   ██  ████
+██       ██       ██     ██ ██    ██  ██   ███
+████████ ████████ ██     ██ ██     ██ ██    ██
 
-               12 modules  ·  3 learning paths
-               adapted to how you work
-               no experience required
-               progress saved between sessions
+ ██████  ██          ███    ██     ██ ████████  ████████
+██    ██ ██         ██ ██   ██     ██ ██     ██ ██
+██       ██        ██   ██  ██     ██ ██     ██ ██
+██       ██       ██     ██ ██     ██ ██     ██ ██████
+██       ██       █████████ ██     ██ ██     ██ ██
+██    ██ ██       ██     ██ ██     ██ ██     ██ ██
+ ██████  ████████ ██     ██  ███████  ████████  ████████
+
+ ██████   ███████  ████████  ████████
+██    ██ ██     ██ ██     ██ ██
+██       ██     ██ ██     ██ ██
+██       ██     ██ ██     ██ ██████
+██       ██     ██ ██     ██ ██
+██    ██ ██     ██ ██     ██ ██
+ ██████   ███████  ████████  ████████
+
+v1.1.0 · 12 modules · adapted to how you work · no experience required
 
 ```
 
