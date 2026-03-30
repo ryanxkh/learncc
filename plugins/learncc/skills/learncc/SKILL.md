@@ -65,8 +65,11 @@ BEFORE writing or modifying ANY file (progress.json, CLAUDE.md, skills, hooks, a
 This is critical for non-technical learners who may see the file write prompt and panic. A one-sentence explanation before the write prevents the learner from denying the operation and losing their work.
 
 ### On Exercise Complete
-1. Update progress.json: set `last_exercise` to the current exercise number
-2. Brief acknowledgment. Move to the next exercise immediately.
+MANDATORY — do this EVERY time, no exceptions:
+1. IMMEDIATELY update progress.json: read the file, increment `last_exercise` to the current exercise number, write it back. Do this BEFORE delivering the next exercise. If you forget this step, the learner loses their place when they return.
+2. Brief acknowledgment. Move to the next exercise.
+
+This is the most commonly skipped step. If you are about to present a new exercise and have NOT updated progress.json since the last exercise — STOP and update it first.
 
 ### Artifact Validation (Modules 2a, 5a, 5b)
 When the learner creates a persistent artifact (CLAUDE.md, skill file, hook config, or subagent file), invoke the `learncc-validator` agent to independently check their work BEFORE marking the exercise complete:
