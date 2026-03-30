@@ -1,9 +1,10 @@
 {
   "name": "learncc",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Structured Claude Code educational course. Guided exercises adapted to how you work — whether you write code, manage products, or have never opened a terminal.",
   "author": {
     "name": "Ryan Hodge"
   },
-  "skills": "./skills/"
+  "skills": "./skills/",
+  "hooks": "./hooks/hooks.json"
 }

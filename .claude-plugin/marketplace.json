@@ -8,7 +8,7 @@
       "name": "learncc",
       "source": "./plugins/learncc",
       "description": "Structured Claude Code educational course. Guided exercises adapted to how you work — whether you write code, manage products, or have never opened a terminal.",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "category": "learning"
     }
   ]
