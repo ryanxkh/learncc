@@ -8,29 +8,34 @@
 
 #### Exercise 0.1 — Welcome Screen
 
-Display this welcome message to start the course:
+Display this welcome message EXACTLY as shown to start the course:
 
 ```
-╔══════════════════════════════════════════════════════════════╗
-║                                                              ║
-║     ██╗     ███████╗ █████╗ ██████╗ ███╗   ██╗              ║
-║     ██║     ██╔════╝██╔══██╗██╔══██╗████╗  ██║              ║
-║     ██║     █████╗  ███████║██████╔╝██╔██╗ ██║              ║
-║     ██║     ██╔══╝  ██╔══██║██╔══██╗██║╚██╗██║              ║
-║     ███████╗███████╗██║  ██║██║  ██║██║ ╚████║              ║
-║     ╚══════╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝              ║
-║                                                              ║
-║            ╔═╗╦  ╔═╗╦ ╦╔╦╗╔═╗  ╔═╗╔═╗╔╦╗╔═╗               ║
-║            ║  ║  ╠═╣║ ║ ║║║╣   ║  ║ ║ ║║║╣                ║
-║            ╚═╝╩═╝╩ ╩╚═╝═╩╝╚═╝  ╚═╝╚═╝═╩╝╚═╝               ║
-║                                                              ║
-║          A structured, hands-on educational course           ║
-║       Adapted to how you work. No experience required.       ║
-║                                                              ║
-╚══════════════════════════════════════════════════════════════╝
+    ┌─────────────────────────────────────────────────┐
+    │                                                 │
+    │              L E A R N   C C                    │
+    │                                                 │
+    │          learn  · claude  · code                │
+    │                                                 │
+    │   ─────────────────────────────────────────     │
+    │                                                 │
+    │     A structured, hands-on course for           │
+    │     mastering Claude Code — adapted to          │
+    │     how you work.                               │
+    │                                                 │
+    │     No experience required.                     │
+    │                                                 │
+    │     12 modules · 3 learning paths               │
+    │     Progress saved between sessions             │
+    │                                                 │
+    │   ─────────────────────────────────────────     │
+    │                                                 │
+    │     powered by anthropic                        │
+    │                                                 │
+    └─────────────────────────────────────────────────┘
 ```
 
-Then say: "Welcome to LearnCC. I'm going to teach you Claude Code — the real ins and outs, not just the basics. First, a few quick questions so I can tailor this to you."
+Then say: "Welcome to LearnCC. I'm going to teach you Claude Code — the real ins and outs, not just the basics. Let's start with a few quick questions so I can tailor this to you."
 
 #### Exercise 0.2 — Profile Collection
 
