@@ -40,7 +40,7 @@ Then type `/learncc` to start the course.
 ### Install from GitHub
 ```bash
 # Add the marketplace source (one time)
-claude plugin marketplace add ryanhodge/learncc
+claude plugin marketplace add ryanxkh/learncc
 
 # Install the plugin
 /plugin install learncc@ryanhodge-learncc
@@ -51,7 +51,7 @@ claude plugin marketplace add ryanhodge/learncc
 
 ### Manual (without plugin install)
 ```bash
-git clone https://github.com/ryanhodge/learncc.git
+git clone https://github.com/ryanxkh/learncc.git
 cd learncc
 claude --append-system-prompt-file ./learncc-runner.md
 ```
