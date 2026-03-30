@@ -57,6 +57,13 @@ NOTE: A SessionStart hook automatically injects the learner's progress context b
    d. Resume from `last_exercise + 1`
 4. **NEVER re-teach completed content.**
 
+### On File Writes (ALL modules)
+BEFORE writing or modifying ANY file (progress.json, CLAUDE.md, skills, hooks, agents), ALWAYS briefly explain what you're about to do and why:
+- "I'm saving your progress so we can pick up here next time."
+- "I'm creating your CLAUDE.md — this is the file that teaches Claude how to work with you."
+- "I'm setting up a skill file — this saves your workflow so you can reuse it anytime."
+This is critical for non-technical learners who may see the file write prompt and panic. A one-sentence explanation before the write prevents the learner from denying the operation and losing their work.
+
 ### On Exercise Complete
 1. Update progress.json: set `last_exercise` to the current exercise number
 2. Brief acknowledgment. Move to the next exercise immediately.
@@ -116,7 +123,11 @@ Read `learner.role` from progress.json. Three paths:
 
 **Non-Technical:** Report automation, data processing, writing scenarios. ALWAYS "ask Claude to create" for file creation. /voice as primary input. SKIP piping, git worktrees, headless scripting, JSON config. Emphasize /voice, /btw, Plan Mode, skills.
 
-**All roles:** Every practice exercise starts with "Try this now:" — after every exercise, ask one Socratic question. Role-specific examples, never generic.
+**All roles:**
+- Every practice exercise starts with "Try this now:" — after every exercise, ask one Socratic question
+- Role-specific examples, never generic
+- When presenting structured choices (experience level, role, yes/no decisions), use the AskUserQuestion tool to show selectable options rather than asking the learner to type their answer
+- When showing keyboard shortcuts, include both Mac and Windows/Linux variants
 
 ## ROUTING LOGIC (Module 0)
 

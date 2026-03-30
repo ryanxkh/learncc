@@ -6,13 +6,52 @@
 
 **Time limit:** 10 minutes. After 12 minutes, force routing: "Let me route you now based on what I've heard."
 
-#### Exercise 0.1 — Profile Collection
-Say: "Welcome to LearnCC. I'm going to teach you Claude Code — the real ins and outs, not just the basics. First, a few quick questions so I can tailor this to you."
+#### Exercise 0.1 — Welcome Screen
 
-Ask these three questions (one at a time, not all at once):
-1. "What do you do for work? What's your role, your domain, and what tools do you use daily?"
-2. "How much experience do you have with Claude Code? Never used it / tried it a few times / use it regularly / daily power user?"
-3. "Have you used a terminal (command line) before? If so, how comfortable are you?"
+Display this welcome message to start the course:
+
+```
+╔══════════════════════════════════════════════════════════════╗
+║                                                              ║
+║     ██╗     ███████╗ █████╗ ██████╗ ███╗   ██╗              ║
+║     ██║     ██╔════╝██╔══██╗██╔══██╗████╗  ██║              ║
+║     ██║     █████╗  ███████║██████╔╝██╔██╗ ██║              ║
+║     ██║     ██╔══╝  ██╔══██║██╔══██╗██║╚██╗██║              ║
+║     ███████╗███████╗██║  ██║██║  ██║██║ ╚████║              ║
+║     ╚══════╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝              ║
+║                                                              ║
+║            ╔═╗╦  ╔═╗╦ ╦╔╦╗╔═╗  ╔═╗╔═╗╔╦╗╔═╗               ║
+║            ║  ║  ╠═╣║ ║ ║║║╣   ║  ║ ║ ║║║╣                ║
+║            ╚═╝╩═╝╩ ╩╚═╝═╩╝╚═╝  ╚═╝╚═╝═╩╝╚═╝               ║
+║                                                              ║
+║          A structured, hands-on educational course           ║
+║       Adapted to how you work. No experience required.       ║
+║                                                              ║
+╚══════════════════════════════════════════════════════════════╝
+```
+
+Then say: "Welcome to LearnCC. I'm going to teach you Claude Code — the real ins and outs, not just the basics. First, a few quick questions so I can tailor this to you."
+
+#### Exercise 0.2 — Profile Collection
+
+Use the AskUserQuestion tool to collect the learner's profile with STRUCTURED CHOICES wherever possible. Do not ask free-text questions when a selection would work better.
+
+**Question 1 — Role** (free-text, since roles are diverse):
+"What do you do for work? What's your role, your domain, and what tools do you use daily?"
+
+**Question 2 — Experience** (use AskUserQuestion with selectable options):
+Ask using AskUserQuestion with these choices:
+- "Never used it"
+- "Tried it a few times"
+- "Use it regularly"
+- "Daily power user (4+ months)"
+
+**Question 3 — Terminal comfort** (use AskUserQuestion with selectable options):
+Ask using AskUserQuestion with these choices:
+- "Never used a terminal"
+- "Basic (can open it, type commands)"
+- "Comfortable (use it regularly)"
+- "Expert (daily terminal/shell user)"
 
 Store answers in progress.json under `learner` fields: `role`, `domain`, `experience`, `surface`.
 
@@ -21,8 +60,8 @@ Classify role into one of three paths:
 - If they mention product, PM, research, analysis, design, UX → `"pm"`
 - If neither, or they mention operations, writing, marketing, admin, management, trades, teaching → `"non-technical"`
 
-#### Exercise 0.2 — Terminal Check & Competency
-**If they said they've never used a terminal:** Skip the competency questions entirely. Say: "No problem at all — we'll start with a quick orientation on the terminal. It's simpler than it looks." Route to Module 0.5. Update progress.json. Stop here.
+#### Exercise 0.3 — Terminal Check & Competency
+**If they selected "Never used a terminal":** Skip the competency questions entirely. Say: "No problem at all — we'll start with a quick orientation on the terminal. It's simpler than it looks." Route to Module 0.5. Update progress.json. Stop here.
 
 **If they have some terminal experience:** Run the competency check with warm framing:
 "I'm going to ask three quick questions. It's completely fine to say 'I don't know' — these just help me figure out where to start. By the end of this course, you'll know all three cold."
@@ -36,7 +75,7 @@ Classify role into one of three paths:
 
 Count correct answers (partial credit for close answers).
 
-#### Exercise 0.3 — Surfaces Overview
+#### Exercise 0.4 — Surfaces Overview
 "Claude Code runs on several surfaces — each with slightly different strengths:"
 - **CLI (Terminal):** Full-featured, all commands, maximum control. What you're using now.
 - **Desktop App:** Visual diffs, live preview, Dispatch (send tasks from your phone), auto-worktrees.
@@ -48,7 +87,13 @@ Then recommend based on their profile:
 - Developer using VS Code: "The VS Code extension is worth exploring — it adds inline diffs and visual plan review. This course works in CLI, but the features transfer."
 - Everyone else: "CLI gives you the most control, and that's what we'll use. Everything you learn here works on other surfaces too."
 
-#### Exercise 0.4 — Routing
+#### Exercise 0.5 — Save Profile & Route
+
+**IMPORTANT: Before writing to progress.json, ALWAYS explain what you're doing and why:**
+"I'm going to save your profile to a small file on your computer so we can pick up where you left off if you come back later. You'll see a prompt asking to write a file — that's completely normal. Go ahead and allow it."
+
+This guidance applies to EVERY file write throughout the entire course. Always explain before writing. A learner who doesn't understand why Claude is modifying files will deny the write and lose their progress.
+
 Apply the routing table:
 
 | Condition | Route To | What to Say |
@@ -67,4 +112,3 @@ Update progress.json with learner profile and mark skipped modules as `"skipped"
 Do NOT ask "Does that sound right?" — just route. The learner can object if they want.
 
 ---
-
