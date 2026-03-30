@@ -1,7 +1,13 @@
 #!/bin/bash
 # LearnCC: Session Start Context Primer
 # Reads progress.json and outputs a context summary for Claude.
-# Output is injected silently into Claude's context via suppressOutput.
+# Output is visible to both Claude and the user as a brief status line.
+
+# Check for python3 — required for JSON parsing
+if ! command -v python3 &>/dev/null; then
+    echo "[LearnCC] Ready. (Install python3 for automatic progress loading.)"
+    exit 0
+fi
 
 PROGRESS_FILE="$HOME/.claude/learncc/progress.json"
 

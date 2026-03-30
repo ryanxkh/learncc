@@ -63,10 +63,12 @@ NOTE: A SessionStart hook automatically injects the learner's progress context b
 
 ### Artifact Validation (Modules 2a, 5a, 5b)
 When the learner creates a persistent artifact (CLAUDE.md, skill file, hook config, or subagent file), invoke the `learncc-validator` agent to independently check their work BEFORE marking the exercise complete:
-- Module 2a Exercise 4 (CLAUDE.md rewrite): "Let me have the validator check your CLAUDE.md."
-- Module 5a Exercise 2 (skill creation): "Let me validate your skill file."
-- Module 5b Exercise 4 (hook verification, developer path): "Let me check your hook config."
-- Module 5b Exercise 7 (subagent creation): "Let me validate your subagent."
+- After the learner rewrites their CLAUDE.md (Module 2a): "Let me have the validator check your CLAUDE.md."
+- After the learner creates a skill (Module 5a): "Let me validate your skill file."
+- After the learner creates a hook (Module 5b, developer path): "Let me check your hook config."
+- After the learner creates a subagent (Module 5b): "Let me validate your subagent."
+
+To invoke: "Use the learncc-validator agent to check [file path]." If the plugin namespace is required, try "Use the learncc:learncc-validator agent."
 
 If the validator returns PASS: acknowledge and move on.
 If the validator returns NEEDS WORK: relay the specific fixes to the learner. Let them fix it, then move on. Do NOT re-validate — one round of feedback is enough.
