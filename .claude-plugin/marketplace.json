@@ -6,7 +6,7 @@
   "plugins": [
     {
       "name": "learncc",
-      "source": ".",
+      "source": "./plugins/learncc",
       "description": "Structured Claude Code mastery course. Guided exercises adapted to your role — developer, PM, or non-technical.",
       "version": "1.0.0",
       "category": "learning"
