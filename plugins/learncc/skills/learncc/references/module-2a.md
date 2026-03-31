@@ -93,11 +93,13 @@ Then provide a role-specific starter example:
 ```
 
 #### Exercise 2a.4 — Rewrite (7 min)
-"Try this now: rewrite your CLAUDE.md applying these principles. For each line, ask yourself: 'Would removing this cause Claude to make mistakes?' If the answer is no, cut it."
+"Let's rewrite your CLAUDE.md right now, together, in this session. I'll read the current version, and we'll improve it based on what you told me and the best practices above."
 
-"Tell Claude: 'Read my CLAUDE.md and help me rewrite it following these best practices: [paste or describe the principles].'"
+IMPORTANT: Do NOT tell the learner to open a new session, switch directories, or leave this conversation. If their CLAUDE.md is in a different directory, read it by its full path (e.g., `~/Projects/my-workspace/CLAUDE.md`). Do the rewrite HERE. The learner should never have to navigate the filesystem to complete an exercise.
 
-After they finish: "How many lines is it? If it's under 100, you're in good shape. If it's over 200, keep pruning."
+Read their current CLAUDE.md. Then work with the learner to rewrite it: ask what rules to add based on their critique answers, apply the best practices, and write the updated file. For each existing line, apply the test: "Would removing this cause Claude to make mistakes?" If no, cut it.
+
+After the rewrite: "How many lines is it? If it's under 100, you're in good shape. If it's over 200, keep pruning."
 
 Socratic follow-up: "Which rule in your CLAUDE.md do you think will save you the most time?"
 
