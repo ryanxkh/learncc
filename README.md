@@ -87,39 +87,43 @@ Built on research-backed educational principles:
 ```
 learncc/
 ├── .claude-plugin/
-│   └── plugin.json               # Plugin manifest
-├── skills/
-│   └── learncc/
-│       ├── SKILL.md              # Course orchestrator (166 lines)
-│       └── references/
-│           ├── module-0.md       # Orientation + Surfaces
-│           ├── module-0.5.md     # Terminal Basics (non-technical)
-│           ├── module-1.md       # First Contact + Voice
-│           ├── module-2a.md      # CLAUDE.md & Memory
-│           ├── module-2b.md      # Settings & Permissions
-│           ├── module-3.md       # Context Mastery
-│           ├── module-4.md       # Plan & Verify
-│           ├── module-5a.md      # Skills & Plugins
-│           ├── module-5b.md      # Hooks & Subagents
-│           ├── module-6a.md      # Parallel Work
-│           ├── module-6b.md      # Integrations & Automation
-│           └── module-7.md       # The Meta Game
-├── examples/
-│   ├── claude-md-developer.md    # Starter CLAUDE.md for developers
-│   ├── claude-md-pm.md           # Starter CLAUDE.md for PMs
-│   ├── claude-md-general.md      # Starter CLAUDE.md for non-technical
-│   ├── example-skill.md          # Template skill file
-│   ├── example-hook.json         # Template hook configuration
-│   └── example-subagent.md       # Template subagent file
-├── learncc-runner.md             # Standalone version (all-in-one system prompt)
-├── README.md                     # This file
-├── LICENSE                       # MIT
-├── CHANGELOG.md                  # Version history
-└── docs/                         # Design and research (for contributors)
-    ├── COURSE-BLUEPRINT-v2.md    # Design document
-    ├── QUALITY-AUDIT.md          # UX audit specs
-    ├── VERIFICATION-REPORT.md    # Research verification
-    └── research/                 # Source research (9 files)
+│   └── marketplace.json            # Marketplace manifest
+├── plugins/learncc/                # The plugin
+│   ├── .claude-plugin/
+│   │   └── plugin.json             # Plugin manifest
+│   ├── skills/learncc/
+│   │   ├── SKILL.md                # Course orchestrator (~200 lines)
+│   │   └── references/             # Module content (loaded on demand)
+│   │       ├── module-0.md         # Orientation + Surfaces
+│   │       ├── module-0.5.md       # Terminal Basics (non-technical)
+│   │       ├── module-1.md         # First Contact + Voice
+│   │       ├── module-2a.md        # CLAUDE.md & Memory
+│   │       ├── module-2b.md        # Settings & Permissions
+│   │       ├── module-3.md         # Context Mastery
+│   │       ├── module-4.md         # Plan & Verify
+│   │       ├── module-5a.md        # Skills & Plugins
+│   │       ├── module-5b.md        # Hooks & Subagents
+│   │       ├── module-6a.md        # Parallel Work
+│   │       ├── module-6b.md        # Integrations & Automation
+│   │       └── module-7.md         # The Meta Game
+│   ├── hooks/
+│   │   ├── hooks.json              # Session start/end hooks
+│   │   └── scripts/
+│   │       └── session-context.sh  # Progress context injection
+│   ├── agents/
+│   │   └── learncc-validator.md    # Exercise validation agent
+│   └── examples/                   # Starter templates
+│       ├── claude-md-developer.md
+│       ├── claude-md-pm.md
+│       ├── claude-md-general.md
+│       ├── example-skill.md
+│       ├── example-hook.json
+│       └── example-subagent.md
+├── learncc-runner.md               # Standalone version (all-in-one)
+├── README.md
+├── LICENSE                         # MIT
+├── CHANGELOG.md
+└── docs/                           # Design docs (for contributors)
 ```
 
 ## Progress Tracking
