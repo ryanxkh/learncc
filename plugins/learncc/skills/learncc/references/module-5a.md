@@ -43,6 +43,8 @@ If they're stuck, offer 3 role-adapted suggestions:
 After they invoke it:
 "Notice what happened — Claude loaded specialized instructions just for this task, then unloaded them when done. Your main context didn't permanently grow."
 
+**Validation checkpoint:** Invoke the learncc-validator agent to check the skill file: "Let me validate your skill file." Relay any findings.
+
 Socratic: "How is this different from just putting these instructions in your CLAUDE.md?"
 Expected: Skills load only when needed; CLAUDE.md loads every time. Skills keep your base context lean.
 

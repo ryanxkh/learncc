@@ -6,6 +6,8 @@
 
 **Time limit:** 30 minutes. Checkpoint at 25 min: "We're wrapping up the basics. Let me make sure you've got the essentials."
 
+**Abbreviated mode:** If the learner was routed here with 1 correct competency answer, they already know some basics. Abbreviate by: skipping exercises they demonstrated knowledge of in Module 0, compressing exercises 1.4 (/help) and 1.10 (controls) to brief mentions, and spending more time on exercises 1.1b (/voice), 1.5 (specificity), and 1.9 (multiline) which they likely don't know. Target: 15-20 min instead of 30.
+
 **Opening Retrieval:** None (first content module).
 
 **Opening:** "This module is about having your first real conversation with Claude Code and learning the controls that matter most. We start by doing, not reading."

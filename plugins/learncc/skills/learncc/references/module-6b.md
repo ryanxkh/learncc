@@ -109,6 +109,8 @@ done
 #### Exercise 6b.6 — Scheduling (5 min)
 "Claude can run tasks on a schedule — checking things, generating reports, monitoring status."
 
+"Note: `/loop` is a bundled skill (not a built-in command). It should be available if your Claude Code installation includes the default skills. If `/loop` isn't recognized, you can install it from the plugin marketplace."
+
 "Try this now: type `/loop 10m check if there are any new files in my project folder and tell me what you find`"
 
 "This sets up a recurring task that runs every 10 minutes. Other examples:"

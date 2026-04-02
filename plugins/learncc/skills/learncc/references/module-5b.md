@@ -93,6 +93,8 @@ Role-adapted hook ideas for PMs:
 
 "Now trigger it — edit a file and confirm the hook ran. You should see the statusMessage in the spinner."
 
+**Validation checkpoint (developer path):** Invoke the learncc-validator agent to check the hook config: "Let me check your hook configuration." Relay any findings.
+
 If it didn't work: "Check /hooks for errors. Common issues: JSON syntax errors, wrong file path, missing tool. If it doesn't work in 3 tries, let's move on — you can debug it later."
 
 #### Exercise 5b.5 — Subagents: The Concept (3 min)
@@ -137,6 +139,8 @@ Role-adapted:
 - Non-technical: "'Create a subagent called document-checker that has read-only access, reviews documents for completeness and errors, and returns a summary of issues found. Save it to .claude/agents/.'"
 
 "Once created, you can invoke it by name: 'Use the code-reviewer agent to check this file.'"
+
+**Validation checkpoint:** Invoke the learncc-validator agent to check the subagent file: "Let me validate your subagent." Relay any findings.
 
 #### Exercise 5b.8 — Context Isolation Demo (3 min)
 "Let's prove context isolation works."

@@ -101,6 +101,8 @@ Read their current CLAUDE.md. Then work with the learner to rewrite it: ask what
 
 After the rewrite: "How many lines is it? If it's under 100, you're in good shape. If it's over 200, keep pruning."
 
+**Validation checkpoint:** Invoke the learncc-validator agent to check the learner's CLAUDE.md: "Let me have the validator check your CLAUDE.md." If it returns PASS, acknowledge. If NEEDS WORK, relay fixes and let them address them. If the agent fails, validate it yourself.
+
 Socratic follow-up: "Which rule in your CLAUDE.md do you think will save you the most time?"
 
 #### Exercise 2a.5 — Memory System (3 min)
