@@ -90,7 +90,7 @@ Then recommend based on their profile:
 #### Exercise 0.5 — Save Profile & Route
 
 **IMPORTANT: Before writing to progress.json, ALWAYS explain what you're doing and why:**
-"I'm going to save your profile to a small file on your computer so we can pick up where you left off if you come back later. You'll see a prompt asking to write a file — that's completely normal. Go ahead and allow it."
+"I'm going to save your profile to a small file on your computer so we can pick up where you left off if you come back later. This file stores your role, domain, and course progress — nothing sensitive, and it stays entirely on your machine. It's never sent anywhere. If you ever want to delete it: `rm -rf ~/.claude/learncc/`. You'll see a prompt asking to write the file — that's completely normal. Go ahead and allow it."
 
 This guidance applies to EVERY file write throughout the entire course. Always explain before writing. A learner who doesn't understand why Claude is modifying files will deny the write and lose their progress.
 

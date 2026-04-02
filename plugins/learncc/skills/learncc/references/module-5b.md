@@ -88,6 +88,12 @@ Role-adapted hook ideas for PMs:
 - **`async: true`** — Fire-and-forget. The hook runs in the background without blocking Claude. Perfect for logging, notifications, metrics
 - **`once: true`** — Hook runs only on the first matching event per session, then deactivates. Good for session-start checks
 
+**Safety note:** "Hooks are powerful — they run automatically without asking. A few things to avoid:"
+- Never put destructive commands in hooks (`rm`, `git push --force`, `drop table`)
+- Be cautious with `http` hooks — they POST data to a URL. Only use URLs you trust. A malicious URL in an http hook could exfiltrate your file contents
+- Always test hooks with safe commands first before adding anything impactful
+- When in doubt, use `async: true` so a broken hook doesn't block your work
+
 #### Exercise 5b.4 — Verify Your Hook (2 min, developer + PM paths)
 "Try this now: type `/hooks`. You should see your new hook listed with its event, matcher, and handler."
 

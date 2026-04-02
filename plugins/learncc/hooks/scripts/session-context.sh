@@ -23,7 +23,8 @@ if [ ! -s "$PROGRESS_FILE" ] || ! head -c 1 "$PROGRESS_FILE" | grep -q '{'; then
     fi
 fi
 
+# Truncate output to prevent context flooding from corrupted/bloated files
 echo "[LearnCC Session Context] Returning learner. Progress data:"
-cat "$PROGRESS_FILE"
+head -c 2000 "$PROGRESS_FILE"
 echo ""
 echo "[End LearnCC Context] Read this file with the Read tool to confirm, then resume where the learner left off."
