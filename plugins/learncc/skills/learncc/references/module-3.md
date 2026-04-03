@@ -93,7 +93,11 @@ Role-adapted practice:
 
 "The rewind feature: press **Esc+Esc** (double-tap Escape). This opens a menu where you can restore your conversation, your code, or both to any previous checkpoint. Every time you send a message, Claude creates a checkpoint. They persist even if you close the terminal."
 
-Practice: "Try this now: /rename this session. Then exit with Ctrl+D. Then type `claude --continue` to come back."
+Practice: "Let's try the full cycle. First, /rename this session to something memorable."
+
+"Now I'm going to have you exit Claude Code and come back — this is the ONE exercise in the course that requires leaving. When you press Ctrl+D, your terminal will go back to the normal command line. Don't worry — your conversation is saved. Type `claude --continue` to pick up right where you left off."
+
+"Try this now: press Ctrl+D to exit. Then type `claude --continue` in your terminal to come back."
 
 (Wait for them to complete the exit/resume cycle.)
 
@@ -105,7 +109,7 @@ Role-adapted examples:
 - PM: "`@meeting-notes-march.md` summarize the key decisions and create action items"
 - Non-technical: "`@budget-q2.csv` what's the total spend for Q2? Which vendor is highest?"
 
-"Try this now: reference a real file in your workspace with `@` and ask Claude something about it."
+"Try this now: reference a file with `@` and ask Claude something about it. If you have files in your current directory, use one of those. If not, try `@CLAUDE.md` to reference the CLAUDE.md you created in the last module — ask Claude to summarize what's in it."
 
 "You can reference multiple files: `@file1.md and @file2.md compare these two documents`"
 

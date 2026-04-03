@@ -13,12 +13,14 @@
 
 "Think of it as having multiple assistants in separate rooms. They don't share notes, they don't interfere with each other, and they can all work at the same time."
 
+"This is one of the few exercises in the course where you'll leave this conversation briefly. To run parallel sessions, you need a second terminal window. Don't worry — this session stays exactly where it is."
+
 "Try this now: open a new terminal window."
 - Mac: Cmd+N (or Cmd+T for a new tab)
 - Windows/Linux: Ctrl+Shift+N
 - VS Code: click the + in the terminal panel
 
-"In the new window, type `claude`. You now have two completely independent Claude sessions."
+"In the new window, type `claude`. You now have two completely independent Claude sessions. Switch between them — this one is still here."
 
 "Switch between the windows. Notice: they have no idea about each other. Different context, different conversation, different state."
 

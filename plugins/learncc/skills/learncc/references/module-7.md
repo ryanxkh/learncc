@@ -93,24 +93,23 @@ Practice: "Name one task you'll keep doing manually from now on, and one task yo
 **3. /copy N + 'w' writes to a file.**
 "Try `/copy 1`. In the picker, press `w` instead of Enter. It writes the response directly to a file instead of the clipboard. Useful over SSH where clipboard doesn't work."
 
-**4. The env block in settings.json.**
-"Instead of setting environment variables in your shell profile, put them in your settings.json `env` block. Cleaner, scoped, version-controllable. You saw this in Module 2b (developer path) — now use it for real."
+**The remaining gems are role-branched.** Pick the ones relevant to this learner's path:
 
-**5. PR status in the footer.**
-"If you're on a git branch with an open PR, look at the bottom of your screen. There's a color-coded PR link: green (approved), yellow (pending), red (changes requested), gray (draft), purple (merged). It updates every 60 seconds." (Developer path only — others: skip or just mention.)
+**Developer gems (show all of these to developer path):**
+- **env block in settings.json** — "Put environment variables in your settings.json `env` block instead of your shell profile. Cleaner, scoped, and version-controllable."
+- **PR status in the footer** — "If you're on a git branch with an open PR, look at the bottom of your screen. Color-coded PR link: green (approved), yellow (pending), red (changes requested). Updates every 60 seconds."
+- **--debug with category filtering** — "`claude --debug 'api,hooks'` shows only API and hook debug output. Prefix with `!` to exclude: `--debug '!statsig,!file'`."
+- **$schema for settings autocomplete** — "Add `\"$schema\": \"https://json.schemastore.org/claude-code-settings.json\"` as the first line of your settings.json for autocomplete in VS Code."
+- **CLAUDE_CODE_TASK_LIST_ID** — "Set this env var before starting Claude. All sessions with the same ID share a task list."
 
-**6. --debug with category filtering.**
-"`claude --debug 'api,hooks'` shows only API and hook debug output. Prefix with `!` to exclude: `--debug '!statsig,!file'`. Essential for diagnosing hook or MCP issues." (Developer + PM path.)
+**PM gems (show these to PM path):**
+- **env block in settings.json** — same as above, useful for PM-relevant settings
+- **CLAUDE_CODE_TASK_LIST_ID** — useful for coordinating parallel research sessions
 
-**7. CLAUDE_CODE_TASK_LIST_ID for shared task lists.**
-"Set `CLAUDE_CODE_TASK_LIST_ID=myproject` before starting Claude. All sessions with the same ID share a task list — coordinate parallel work across terminals."
-
-**8. $schema for settings autocomplete.**
-"Add this as the first line of your settings.json:"
-```json
-{ "$schema": "https://json.schemastore.org/claude-code-settings.json" }
-```
-"If you use VS Code or Cursor, you now get autocomplete and validation for every settings key."
+**Non-technical gems (show these instead):**
+- **/release-notes** — "Check what's new after updates. Claude Code ships fast."
+- **/doctor** — "If something isn't working, /doctor diagnoses the problem."
+- **Voice language setting** — "Add `\"language\": \"spanish\"` (or your language) to settings.json to change both Claude's response language and voice dictation language."
 
 **9. Settings auto-backup.**
 "Claude Code silently keeps the 5 most recent backups of your config files. If you accidentally corrupt your settings.json, the backup is recoverable."
