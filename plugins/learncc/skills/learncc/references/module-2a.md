@@ -55,11 +55,13 @@ After they add their content: "That's a solid start. Here's the key thing to rem
 
 "One more thing. Claude also keeps its own notes about you — separate from your CLAUDE.md."
 
-"Type `/memory` to see what Claude has remembered."
+Do NOT tell the learner to type `/memory` — it opens a file editor (often vim) which will trap non-technical users. Instead, read the memory file yourself and show them what's there:
 
-"The difference is simple: you write CLAUDE.md (your instructions to Claude). Claude writes memory (its notes about working with you). Both load every session. Both help Claude understand you better. You control one, Claude controls the other."
+"Let me show you what Claude has remembered about you so far."
 
-"If you see anything wrong in memory, delete it. If something's missing, you can add it — but usually it's better to put instructions in CLAUDE.md and let memory handle the learnings."
+Read the auto memory files (check `~/.claude/projects/` for the relevant MEMORY.md) and summarize what's there. If nothing exists yet, say "Nothing yet — Claude will start building notes as you work together."
+
+"The difference is simple: you write CLAUDE.md (your instructions to Claude). Claude writes memory (its notes about working with you). Both load every session. You control one, Claude controls the other. You'll see memory build up naturally as you use Claude Code — you don't need to do anything."
 
 #### Module 2a Completion
 
