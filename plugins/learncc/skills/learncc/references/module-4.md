@@ -34,7 +34,7 @@ Let them work for 3-5 minutes. Then pull them back:
 "Most of the time, jumping straight in produces something 60-70% right. The last 30-40% is where Plan Mode pays for itself."
 
 #### Exercise 4.3 — Plan Mode (5 min concept + 12 min practice, capped)
-"Try this now: press Shift+Tab until you see 'plan' at the bottom of your screen."
+"Try this now: press Shift+Tab. Each press cycles between modes — you'll see the mode name change at the bottom of your screen. The modes are: default (Claude asks before doing things), acceptEdits (Claude edits files without asking), and plan (Claude only plans, never acts). Keep pressing until you see 'plan'."
 
 "In Plan Mode, Claude reads, researches, and proposes — but it doesn't change anything. It's read-only exploration. Think of it like a blueprint review before breaking ground."
 

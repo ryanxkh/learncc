@@ -147,7 +147,7 @@ Skip this exercise. Say: "There's a technique called piping for sending data to 
 | high | Multi-step analysis, debugging | Slower | Higher |
 | max | Complex reasoning, architecture decisions (Opus only) | Slowest | Highest |
 
-"You can also toggle thinking with Option+T (Mac) / Alt+T (Win/Linux). Use high effort when quality matters, low when speed matters."
+"You can also toggle thinking with Option+T (Mac) / Alt+T (Win/Linux). Use high effort when quality matters, low when speed matters. Note: higher effort levels use more of your usage allowance. Switch back to medium when you're done experimenting."
 
 #### Exercise 3.11 — Utility Commands (3 min)
 "Three quick tools for getting stuff out of Claude Code:"
