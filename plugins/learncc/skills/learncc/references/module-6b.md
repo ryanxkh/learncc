@@ -153,7 +153,11 @@ done
 - Multiple conversation tabs
 - Graphical plugin manager
 
-"Try these now: `/desktop` opens the Desktop app. `/remote-control` lets you steer this session from your phone (scan the QR code). `/mobile` shows a QR for the Claude phone app."
+"A few commands that connect to other surfaces. These open interfaces outside your terminal, so don't be surprised when something new appears:"
+- "`/desktop` — launches the Claude Code Desktop app (a separate application window will open)"
+- "`/remote-control` — shows a QR code you can scan with your phone to steer this session remotely"
+- "`/mobile` — shows a QR code for the Claude phone app"
+"Try one if you're curious, or just know they exist for later."
 
 #### Module 6b Completion
 

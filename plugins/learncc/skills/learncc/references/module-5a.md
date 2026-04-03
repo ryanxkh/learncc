@@ -62,7 +62,7 @@ Expected: Skills load only when needed; CLAUDE.md loads every time. Skills keep 
 #### Exercise 5a.4 — Plugins & Marketplace (10 min, capped)
 "Plugins are pre-built extension packages from the community. They can bundle skills, hooks, agents, and tool integrations in one install."
 
-"Try this now: type `/plugin`. You'll see a browser with tabs: Discover, Installed, Marketplaces, Errors."
+"Try this now: type `/plugin`. You'll see a browser with tabs: Discover, Installed, Marketplaces, Errors. Use arrow keys to navigate, Space to select, and Esc to exit back to your conversation."
 
 "Browse the **Discover** tab."
 

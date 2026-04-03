@@ -24,7 +24,7 @@ Listen. Acknowledge. This also serves as a self-assessment — what stuck and wh
 
 "If you work with a team: commit your CLAUDE.md to version control. New team members inherit your battle-tested rules from day one."
 
-Socratic: "Which rule in your CLAUDE.md has prevented the most mistakes?"
+Socratic: "Which rule in your CLAUDE.md do you think will save you the most time going forward?"
 
 #### Exercise 7.2 — Prompt Craft (8 min)
 "Three patterns that dramatically improve Claude's output:"

@@ -43,13 +43,13 @@ Let them work for 3-5 minutes. Then pull them back:
 Interaction pattern — guide them through 2-3 refinement rounds:
 "Look at Claude's plan. What would you change? Tell Claude — 'Actually, do X instead of Y' or 'Add a step for Z.' Go back and forth 2-3 times until the plan matches what you want."
 
-**Ctrl+G — Open in Editor:**
-"You can also press Ctrl+G to open the plan in your text editor, where you can annotate it directly."
+**Ctrl+G — Open in Editor (developer path only):**
+IMPORTANT: Only offer Ctrl+G to developer-path users. For PM and non-technical paths, skip this entirely — refining verbally works just as well and avoids the editor trap.
 
-**IMPORTANT:** "First, check your editor: type `! echo $EDITOR`. If it says 'vim' or shows nothing:"
+For developer path: "There's also Ctrl+G to open the plan in your text editor for direct annotation. Before trying it, check your editor: type `! echo $EDITOR`. If it says 'vim' or shows nothing, set it first:"
 - Mac: `export EDITOR='open -t'` (opens TextEdit)
 - Windows: `export EDITOR='notepad'`
-- Or just skip Ctrl+G and refine verbally — both work
+"If that seems like too much setup, just skip it — refining the plan verbally works great."
 
 "When you accept the plan, Claude will offer to clear the planning context for a clean implementation start. Usually say yes — it gives Claude a fresh window focused purely on execution."
 
@@ -100,7 +100,7 @@ Socratic: "What question did Claude ask that you hadn't thought about?"
 
 "`/plan` enters Plan Mode directly — alternative to pressing Shift+Tab multiple times. You can also include a description: `/plan redesign the onboarding flow`."
 
-"`/diff` opens an interactive diff viewer. It shows what changed — not just the overall git diff, but per-turn diffs (what changed in each Claude response). Use left/right arrows to switch between views."
+"`/diff` opens an interactive diff viewer. It shows what changed — not just the overall git diff, but per-turn diffs (what changed in each Claude response). Use left/right arrows to switch between views. Press `q` or Esc to exit back to your conversation."
 
 **DEVELOPER BRANCH:**
 "Two developer-specific commands: `/pr-comments` fetches GitHub PR review comments and loads them as context — Claude can then address each one. `/security-review` audits your pending changes for common security vulnerabilities."

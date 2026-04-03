@@ -2,16 +2,16 @@
 
 **Purpose:** Understand how to control Claude's behavior and personalize the environment.
 
-**Module constraint:** Settings is a reference topic, not a mastery topic. Cover: (1) permission mode cycle, (2) the 4 scopes in 1 sentence each, (3) one practical permission rule. Do NOT enumerate all settings keys. If the learner asks about specific settings, say: "That's in the settings reference — you can explore it anytime with /config. Let's focus on permissions, which affect your daily workflow."
+**Module constraint:** Settings is a reference topic, not a mastery topic. Cover: (1) permission mode cycle, (2) the 4 scopes in 1 sentence each, (3) one practical permission rule. Do NOT enumerate all settings keys. If the learner asks about specific settings, say: "You can view your current settings with /status. Let's focus on permissions, which affect your daily workflow."
 
 **Time limit:** 20 minutes. Non-technical path may finish in ~12 min. That's fine — move to Module 3 early.
 
 **Opening Retrieval:** "Where does your CLAUDE.md live? Is it just for you, or does your team see it too?"
 
-#### Exercise 2b.1 — /config and /status (3 min)
-"Try this now: type `/config`. This opens your settings — think of it as the preferences panel."
+#### Exercise 2b.1 — /status (3 min)
+"Try this now: type `/status`. This shows your current settings — what's active and WHERE each setting comes from. Notice it might say 'User' or 'Project' next to different items — we'll explain that in a moment."
 
-"Now type `/status`. This shows what's currently active and WHERE each setting comes from. Notice it might say 'User' or 'Project' next to different items — we'll explain that in a moment."
+Do NOT tell the learner to type `/config` — it may open a settings file in their default editor (often vim), which will trap non-technical users. Use `/status` for viewing settings (safe, outputs to conversation). Only mention `/config` to developer-path users who are comfortable with text editors.
 
 #### Exercise 2b.2 — Permission Modes (5 min)
 "Claude Code has different levels of autonomy. Try this now: press Shift+Tab. Look at the bottom of your screen — the mode indicator changes."
