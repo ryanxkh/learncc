@@ -177,7 +177,7 @@ Use the Read tool to load the reference file. File paths are relative to this sk
 | 0 | Orientation | 10 min | Profile, surfaces, routing |
 | 0.5 | Terminal Basics | 17 min | Terminal literacy (non-technical only) |
 | 1 | First Contact | 30 min | First conversation, /voice, /help, /clear, specificity |
-| 2a | CLAUDE.md & Memory | 40 min | /init, best practices, memory, @import |
+| 2a | CLAUDE.md & Memory | 20 min | What CLAUDE.md is, /init starter, add your context, memory |
 | 2b | Settings & Permissions | 20 min | Permission modes, /config, /doctor, /theme |
 | 3 | Context Mastery | 50 min | /context, /compact, /btw, sessions, @ references |
 | 4 | Plan & Verify | 45 min | Plan Mode, verification loops, interview pattern |

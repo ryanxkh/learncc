@@ -1,146 +1,76 @@
-### MODULE 2A: CLAUDE.MD & MEMORY (40 min)
+### MODULE 2A: CLAUDE.MD & MEMORY (20 min)
 
-**Purpose:** Set up the learner's workspace foundation — the instructions that make Claude work for THEM specifically.
+**Purpose:** Plant the seed. Introduce CLAUDE.md as a lightweight starting point that grows over time — not a comprehensive setup exercise.
 
-**Module constraint:** Limit CLAUDE.md creation to TWO passes: first draft, then refinement. If the learner wants to keep iterating, say: "Your CLAUDE.md is a living document — you'll refine it throughout the course and beyond. What you have now is solid enough to move forward." Do NOT let CLAUDE.md creation consume more than 20 of the 40 minutes.
+**Module constraint:** This module is SHORT. The learner creates a minimal CLAUDE.md (5-15 lines) and moves on. No critiquing. No rewriting. No @imports. No .claude/rules/. Those are Module 7 topics when the learner has real experience. If the learner wants to keep adding rules, say: "That instinct is right — and the best rules will come from actually using Claude Code over the next few modules. Let's keep moving."
 
-**Time limit:** 40 minutes. If at 35 min they're still on CLAUDE.md, skip to @import concept and wrap up.
+**Time limit:** 20 minutes.
 
 **Opening Retrieval:** "Quick recall from Module 1 — what did you learn about specificity? Why does giving Claude detailed context matter?"
 
-#### Exercise 2a.1 — /init: Generate a Starting Point (8 min)
+#### Exercise 2a.1 — What Is CLAUDE.md? (3 min)
 
-**Non-technical / PM path — workspace setup first:**
-"Before we create instructions for Claude, let's make sure you have a workspace. Tell Claude: 'Create a folder called my-workspace and set it as the current directory.' (If you already have a project folder, just make sure you're in it.)"
+Explain what it is and why it matters. Connect to their work:
 
-**All paths:**
-"Try this now: type `/init`. Claude will scan your current directory and generate a starter CLAUDE.md based on what it finds."
+"CLAUDE.md is a file that Claude reads at the start of every session. It's standing instructions — context Claude can't figure out on its own. Things like your role, your preferences, your workflows, your tools."
 
-"Read what it produced. Don't worry if it looks code-focused or generic — we're going to make it yours."
+"Right now, every time you start a new conversation with Claude, it starts from zero. It doesn't know what you do, how you like things formatted, or what tools you use. You end up repeating yourself. CLAUDE.md fixes that."
 
-- Non-technical: "If /init generated rules about code formatting or build commands, that's fine — we'll replace them entirely with rules for YOUR work."
-- Developer: "Notice what /init detected about your project. It probably got the stack right but missed your team's specific conventions."
+"The important thing: it starts light and grows over time. You don't write the whole thing today. You add to it as you work with Claude and discover what it needs to know. Think of it like onboarding notes — you write the basics now and add details as they come up."
 
-#### Exercise 2a.2 — Critique (5 min)
-Before asking the learner to critique, explain WHY this file matters to them personally. Connect it to their work:
+#### Exercise 2a.2 — Generate a Starter (5 min)
 
-"Before we evaluate this, let me explain why this file matters. Right now, every time you start a conversation with Claude, you start from zero — Claude doesn't know your role, your tools, your preferences, or how you work. You end up re-explaining the same context every time. CLAUDE.md fixes that. Think of it as onboarding notes for a new team member — what would they need to know on day one to not waste your time with basic questions?"
+"Try this now: type `/init`. Claude will scan your current directory and generate a starter CLAUDE.md."
 
-Role-adapted examples of what a CLAUDE.md prevents:
-- Developer: "Without it, Claude guesses your framework, your test runner, your code style. With it, Claude already knows."
-- PM: "Without it, Claude uses generic templates and wrong stakeholder assumptions. With it, Claude follows YOUR process."
-- Non-technical: "Without it, Claude formats things wrong, uses the wrong date format, doesn't know your file structure. With it, Claude just works."
+If a CLAUDE.md already exists: "You already have one from a previous session — that's fine. Let's look at what's in it and build from there."
 
-THEN ask the critique questions:
-"Now look at what we generated. Three questions:"
-1. "What did it get right about your work?"
-2. "What's missing that you find yourself re-explaining to Claude every time?"
-3. "What's in there that doesn't apply or isn't useful?"
+If /init generates code-focused content for a non-technical user: "That output is based on what's in this directory. We're going to replace it with content that matches YOUR work."
 
-"Tell me your answers. I'll help you see what a strong CLAUDE.md looks like for your role."
+IMPORTANT: Do NOT tell the learner to cd anywhere, open a new session, or create a new directory. Work with whatever directory they're currently in. If they need a workspace later, that will happen naturally as they use Claude Code.
 
-#### Exercise 2a.3 — Best Practices (3 min, max 300 words)
-Deliver AFTER the critique, connecting to gaps they identified:
+#### Exercise 2a.3 — Add Your Context (7 min)
 
-"Here's what makes a CLAUDE.md effective:"
-- **Keep it under 200 lines** (ideally under 100). Long files get partially ignored.
-- **Structure: WHAT / WHY / HOW.** What you do, why it matters, how to do it.
-- **Be specific.** "Use MM/DD/YYYY date format" beats "Format dates properly." "Run `npm test` to verify" beats "Test your changes."
-- **For critical rules, use emphasis:** Start lines with `IMPORTANT:` or `YOU MUST` — Claude follows these more reliably.
-- **Don't state the obvious.** If Claude can figure it out by reading your files, leave it out.
+This is the core exercise. The framing is NOT "what does Claude get wrong" — the learner hasn't used Claude enough to know that. The framing is: **what would Claude need to know about you and how you work to be useful from the first message?**
 
-Then provide a role-specific starter example:
+"Think about what Claude would need to know to help you without a lot of back-and-forth. This isn't about fixing mistakes — it's about giving Claude context it can't possibly guess."
 
-**Developer example (show this to developer path):**
-```
-# Project: E-commerce API
-## Stack: Node.js 20, TypeScript, PostgreSQL, Jest
-## Build: npm run build | Test: npm test | Lint: npm run lint
+"A few categories to think about:"
+- **Who you are:** Your role, your domain, what you actually do day to day
+- **How you work:** Tools you use, processes you follow, frameworks or conventions
+- **Your preferences:** How you like things formatted, what tone to use, date formats, naming conventions
+- **What you'd tell a new colleague:** The stuff that's obvious to you but not to someone who just joined
 
-## Rules
-- IMPORTANT: Always run tests after code changes
-- Use TypeScript strict mode. No `any` types
-- Follow existing patterns in src/controllers/ for new endpoints
-- Database migrations go in src/migrations/ with timestamp prefix
-- PR descriptions must include: what changed, why, how to test
-```
+Role-adapted examples to spark thinking:
+- Developer: "Your stack, your test runner, your branching convention, 'we use ESM not CommonJS'"
+- PM: "Your PRD template structure, your stakeholder names, 'when I say competitive analysis I mean pricing + features + target market'"
+- Non-technical: "Your date format, your file naming convention, 'when I say the report I mean the weekly safety compliance report'"
 
-**PM example (show this to PM path):**
-```
-# Role: Product Manager, B2B SaaS dashboard for marketing teams
-## Team: 6 engineers, 1 designer. Sprint cycle: 2 weeks
+"Try this now: tell Claude what you want in your CLAUDE.md. You can say something like 'Update my CLAUDE.md with these things about how I work:' and list 3-5 things. Keep it short — 5 to 15 lines is perfect for a starting point."
 
-## Rules
-- PRDs follow this structure: Problem, Solution, Requirements, Success Metrics, Open Questions
-- IMPORTANT: Always use bullet points, never paragraphs for requirements
-- Competitor set: Mixpanel, Amplitude, Heap, PostHog, GA4
-- When analyzing competitors, include: pricing, key features, target market, differentiators
-- Stakeholders: VP Product (Sarah), Eng Lead (Marcus), Design Lead (Yuki)
-```
+After they add their content: "That's a solid start. Here's the key thing to remember: this file grows over time. As you go through the rest of this course and start using Claude Code for real work, you'll notice moments where Claude doesn't know something it should. When that happens, add a line. Every few weeks, review it and cut anything that's not pulling its weight."
 
-**Non-technical example (show this to non-technical path):**
-```
-# Role: Operations Manager, mid-size construction company
-## Tools: Excel, Procore, Outlook
+"For the most important rules, start the line with IMPORTANT: or YOU MUST — Claude follows those more reliably."
 
-## Rules
-- Date format: always MM/DD/YYYY
-- Currency: always USD with two decimal places
-- IMPORTANT: When I say "the report" I mean the weekly safety compliance report
-- Project codes follow format: PRJ-YYYY-NNN (e.g., PRJ-2026-047)
-- Safety data is in Excel files in ~/Documents/Safety/
-- When creating reports, use the template structure: Summary, Findings, Action Items, Next Steps
-```
+#### Exercise 2a.4 — Quick Look at Memory (3 min)
 
-#### Exercise 2a.4 — Rewrite (7 min)
-"Let's rewrite your CLAUDE.md right now, together, in this session. I'll read the current version, and we'll improve it based on what you told me and the best practices above."
+"One more thing. Claude also keeps its own notes about you — separate from your CLAUDE.md."
 
-IMPORTANT: Do NOT tell the learner to open a new session, switch directories, or leave this conversation. If their CLAUDE.md is in a different directory, read it by its full path (e.g., `~/Projects/my-workspace/CLAUDE.md`). Do the rewrite HERE. The learner should never have to navigate the filesystem to complete an exercise.
+"Type `/memory` to see what Claude has remembered."
 
-Read their current CLAUDE.md. Then work with the learner to rewrite it: ask what rules to add based on their critique answers, apply the best practices, and write the updated file. For each existing line, apply the test: "Would removing this cause Claude to make mistakes?" If no, cut it.
+"The difference is simple: you write CLAUDE.md (your instructions to Claude). Claude writes memory (its notes about working with you). Both load every session. Both help Claude understand you better. You control one, Claude controls the other."
 
-After the rewrite: "How many lines is it? If it's under 100, you're in good shape. If it's over 200, keep pruning."
-
-**Validation checkpoint:** Invoke the learncc-validator agent to check the learner's CLAUDE.md: "Let me have the validator check your CLAUDE.md." If it returns PASS, acknowledge. If NEEDS WORK, relay fixes and let them address them. If the agent fails, validate it yourself.
-
-Socratic follow-up: "Which rule in your CLAUDE.md do you think will save you the most time?"
-
-#### Exercise 2a.5 — Memory System (3 min)
-"Claude Code has two instruction systems, and they work differently:"
-
-| | CLAUDE.md | Auto Memory |
-|--|-----------|-------------|
-| Who writes it | You | Claude |
-| What it contains | Rules and instructions | Learnings and patterns |
-| When it loads | Every session | Every session |
-| Think of it as | Your onboarding doc for a new hire | That new hire's personal notebook |
-
-"Try this now: type `/memory`. You'll see what Claude has remembered about you and your project. You can delete anything wrong or add things it missed."
-
-#### Exercise 2a.6 — @import: Modular Instructions (3 min)
-"As your CLAUDE.md grows, you can split it into pieces. The `@` symbol followed by a file path tells Claude to also read that file. It's like attaching an appendix to a memo — your main instructions stay short, the details live elsewhere."
-
-Role-adapted exercise:
-- Developer: "Import your architecture doc or style guide: add `@docs/architecture.md` to your CLAUDE.md"
-- PM: "Create a PRD template file, then reference it: add `@prd-template.md` to your CLAUDE.md"
-- Non-technical: "Create a reference file with your common data (client list, project codes), then add `@reference-data.md` to your CLAUDE.md"
-
-Bridge for all: "Try this now: tell Claude: 'Create a [template/reference] file for [something you use often], and add an @import for it to my CLAUDE.md.'"
-
-#### Exercise 2a.7 — .claude/rules/ (2 min, brief mention)
-"One more thing to know: for larger projects, you can organize rules into a `.claude/rules/` directory. Each file covers one topic, and rules can target specific file paths using frontmatter. We won't set this up now — just know it exists for when your CLAUDE.md gets crowded."
+"If you see anything wrong in memory, delete it. If something's missing, you can add it — but usually it's better to put instructions in CLAUDE.md and let memory handle the learnings."
 
 #### Module 2a Completion
 
-**Capability statement:** "You have a working CLAUDE.md tailored to your work. You understand auto memory, @imports, and how to keep your instructions lean and effective."
+**Capability statement:** "You have a working CLAUDE.md with your core context, and you know about auto memory. This file will get better the more you use Claude Code — we'll come back to advanced CLAUDE.md techniques in Module 7."
 
-**Competency check:** "What's the difference between your CLAUDE.md and auto memory? When would you edit one vs. the other?"
+**Competency check:** "What's the difference between your CLAUDE.md and auto memory?"
 
-Expected: CLAUDE.md is rules/instructions you write. Auto memory is observations Claude writes to itself. Edit CLAUDE.md for rules, check /memory for what Claude has learned.
+Expected: CLAUDE.md is instructions you write. Memory is notes Claude writes. Both load every session.
 
 Update progress.json: mark module_2a as `"complete"`.
 
-"Module 2a complete. Next: Module 2b — settings, permissions, and personalizing your Claude Code environment. Quick one — about 20 minutes. Ready?"
+"Module 2a complete. Next: Module 2b — permissions and settings. Quick module, about 20 minutes. This is where you control what Claude can and can't do without asking. Ready?"
 
 ---
-
