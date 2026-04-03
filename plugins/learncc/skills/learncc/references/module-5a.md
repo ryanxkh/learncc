@@ -48,6 +48,8 @@ After they invoke it:
 Socratic: "How is this different from just putting these instructions in your CLAUDE.md?"
 Expected: Skills load only when needed; CLAUDE.md loads every time. Skills keep your base context lean.
 
+Pro tip for teams: "Check your skills into git — team members who pull the repo inherit your battle-tested skills from day one."
+
 #### Exercise 5a.3 — Understand the Skill File (3 min)
 "Ask Claude to show you the skill file it just created. Read it."
 

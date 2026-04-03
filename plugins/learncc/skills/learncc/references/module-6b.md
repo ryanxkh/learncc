@@ -43,7 +43,7 @@ If their tools don't have MCP servers: "The MCP ecosystem is growing but doesn't
 
 "This is especially useful if you're running Claude on a codebase where you want guardrails against accidental destructive operations."
 
-"Toggle it on and try running a task. Notice how many fewer permission prompts you get."
+"Toggle it on and try running a task. Notice how many fewer permission prompts you get. Pro tip: sandbox pairs especially well with acceptEdits mode (Shift+Tab) — you get speed with safety."
 
 ---
 
@@ -63,7 +63,7 @@ If their tools don't have MCP servers: "The MCP ecosystem is growing but doesn't
 | **Sonnet** | Strong all-around | Balanced | Moderate | Daily driver. Most tasks |
 | **Haiku** | Fast, lightweight | Fastest | Lowest | Quick questions, formatting, simple lookups |
 
-"The heuristic: Opus for hard problems, Sonnet for normal work, Haiku for quick tasks."
+"The heuristic: Opus for hard problems, Sonnet for normal work, Haiku for quick tasks. Pro tip: Opus is slower per response, but since you steer it less and correct it less, it's often faster end-to-end for complex tasks."
 
 "/fast toggles fast mode — same Opus model but 2.5x faster at higher cost. Toggle with Option+O (Mac) / Alt+O. Best for rapid iteration when time matters more than cost."
 

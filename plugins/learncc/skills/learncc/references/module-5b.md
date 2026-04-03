@@ -142,6 +142,8 @@ Role-adapted prompts:
 Socratic: "Why is this better than just asking Claude to do the research directly?"
 Expected: Direct research fills your context with all the file contents. A subagent keeps that in its own window and returns only the summary.
 
+Pro tip: "Power users delegate ALL investigation to subagents and reserve their main conversation exclusively for implementation. It's the single biggest context-saving habit."
+
 #### Exercise 5b.7 — Create a Custom Subagent (7 min)
 "You can create specialized subagents with their own instructions, tool access, and even different AI models."
 

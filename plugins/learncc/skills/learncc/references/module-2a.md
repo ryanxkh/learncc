@@ -45,7 +45,7 @@ Role-adapted examples to spark thinking:
 - PM: "Your PRD template structure, your stakeholder names, 'when I say competitive analysis I mean pricing + features + target market'"
 - Non-technical: "Your date format, your file naming convention, 'when I say the report I mean the weekly safety compliance report'"
 
-"Try this now: tell Claude what you want in your CLAUDE.md. You can say something like 'Update my CLAUDE.md with these things about how I work:' and list 3-5 things. Keep it short — 5 to 15 lines is perfect for a starting point."
+"Try this now: tell Claude what you want in your CLAUDE.md. You can say something like 'Update my CLAUDE.md with these things about how I work:' and list 3-5 things. Keep it short — 5 to 15 lines is perfect for a starting point. Pro tip: practitioners report that beyond ~100 lines, Claude starts ignoring instructions in the bottom half."
 
 After they add their content: "That's a solid start. Here's the key thing to remember: this file grows over time. As you go through the rest of this course and start using Claude Code for real work, you'll notice moments where Claude doesn't know something it should. When that happens, add a line. Every few weeks, review it and cut anything that's not pulling its weight."
 

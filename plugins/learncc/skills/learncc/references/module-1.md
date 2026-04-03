@@ -82,7 +82,7 @@ They see today's date printed.
 
 "The `!` prefix runs a command on YOUR computer directly — Claude doesn't process it. Think of it as stepping around your assistant to do something yourself."
 
-- Developer path: "Try `! ls` to see your project files, or `! git status` for your repo state. The `!` shortcut has its own Tab-completion from previous commands."
+- Developer path: "Try `! ls` to see your project files, or `! git status` for your repo state. The `!` shortcut has its own Tab-completion from previous commands. Pro tip: `! git log --oneline -5` is faster than asking Claude when you just need raw terminal output."
 - PM path: "Try `! ls` to see what files are in your current folder."
 - Non-technical path: "You probably won't use this often, but it's there. `! date` is a quick sanity check that it works."
 
@@ -101,7 +101,7 @@ They see today's date printed.
 
 "Try this now: type a few words, then press `\` followed by Enter. You get a new line without sending. Write a 3-line prompt this way, then hit Enter on the last line to send."
 
-"Other options: Option+Enter on Mac, Shift+Enter in iTerm2/Ghostty/Kitty/WezTerm, or Ctrl+J anywhere."
+"Other options: Option+Enter on Mac, Shift+Enter in iTerm2/Ghostty/Kitty/WezTerm, or Ctrl+J anywhere. Pro tip: Ctrl+J works in every terminal — if you remember only one multiline shortcut, make it that one."
 
 #### Exercise 1.10 — Essential Controls (1 min)
 "Three keyboard shortcuts that work differently in the terminal than everywhere else:"

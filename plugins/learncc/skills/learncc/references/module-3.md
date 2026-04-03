@@ -13,7 +13,7 @@
 #### Exercise 3.1 — /context: See Your Fuel Gauge (2 min)
 "Try this now: type `/context`."
 
-"This visualizes your context window — how much is used, what's consuming space, and optimization suggestions. Think of it as a fuel gauge for your conversation."
+"This visualizes your context window — how much is used, what's consuming space, and optimization suggestions. Think of it as a fuel gauge for your conversation. Pro tip: don't just look at the percentage — scroll down to the suggestions section, which tells you specifically what to do."
 
 "Notice the percentage. Remember this number — we'll come back to it."
 
@@ -87,6 +87,8 @@ Role-adapted practice:
 - `claude --resume` (or `claude -r`) — shows a picker of all your sessions. Search, filter, select
 - `/resume` from inside Claude Code — switch to a different session
 
+"Pro tip: `--continue` is directory-specific (picks up the last session from THIS folder), while `--resume` shows sessions across all directories. Use `--continue` when you know the project, `--resume` when you're searching."
+
 "The rewind feature: press **Esc+Esc** (double-tap Escape). This opens a menu where you can restore your conversation, your code, or both to any previous checkpoint. Every time you send a message, Claude creates a checkpoint. They persist even if you close the terminal."
 
 Practice: "Let's try the full cycle. First, /rename this session to something memorable."
@@ -147,7 +149,7 @@ Skip this exercise. Say: "There's a technique called piping for sending data to 
 | high | Multi-step analysis, debugging | Slower | Higher |
 | max | Complex reasoning, architecture decisions (Opus only) | Slowest | Highest |
 
-"You can also toggle thinking with Option+T (Mac) / Alt+T (Win/Linux). Use high effort when quality matters, low when speed matters. Note: higher effort levels use more of your usage allowance. Switch back to medium when you're done experimenting."
+"You can also toggle thinking with Option+T (Mac) / Alt+T (Win/Linux). Use high effort when quality matters, low when speed matters. Note: higher effort levels use more of your usage allowance. Switch back to medium when you're done experimenting. Pro tip: add `\"effortLevel\": \"medium\"` to your settings.json to persist your preferred level across sessions."
 
 #### Exercise 3.11 — Utility Commands (3 min)
 "Three quick tools for getting stuff out of Claude Code:"

@@ -54,7 +54,7 @@ For developer path: "There's also Ctrl+G to open the plan in your text editor fo
 "When you accept the plan, Claude will offer to clear the planning context for a clean implementation start. Usually say yes — it gives Claude a fresh window focused purely on execution."
 
 After they accept and Claude implements:
-"Compare this result to the Exercise 4.1 result. Notice the difference?"
+"Compare this result to the Exercise 4.1 result. Notice the difference? Pro tip: if something goes wrong mid-implementation, switch back to Plan Mode (Shift+Tab) and re-plan from the current state. Don't keep pushing forward with a broken approach."
 
 #### Exercise 4.4 — The Comparison (3 min)
 "You now have two versions of the same task: one without planning, one with."
@@ -75,7 +75,7 @@ Role-adapted verification methods:
 
 "Try this now: type /clear (this erases your conversation history so you can start the task fresh — your files are not affected, only the chat). Redo the SAME task from Exercise 4.1. But this time, include a verification instruction in your prompt. Start with the task description, then add: 'After you finish, [your verification method]. Fix anything that's wrong.'"
 
-"Compare this result to the Plan Mode result. Notice the additional quality?"
+"Compare this result to the Plan Mode result. Notice the additional quality? Pro tip: after two failed correction attempts in the same session, /clear and rewrite a better initial prompt. Continuing to correct compounds context pollution and rarely converges."
 
 #### Exercise 4.6 — The Interview Pattern (2 min concept + 10 min practice, capped)
 "This pattern is especially powerful when you're starting something ambiguous — you know the goal but not all the details."

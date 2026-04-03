@@ -39,6 +39,8 @@ Role-adapted examples:
 - PM: "Branch and explore two different positioning strategies."
 - Non-technical: "Branch and try two different formats for the same report."
 
+Pro tip: "After branching, `/color` each branch differently (e.g., `/color blue` vs `/color green`) so you always know which approach you're looking at."
+
 #### Exercise 6a.3 — DEVELOPER BRANCH: Git Worktrees (10 min)
 
 **Developer path only. PM and non-technical: skip to Exercise 6a.4.**
