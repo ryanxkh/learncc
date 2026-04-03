@@ -114,7 +114,7 @@ Save progress to progress.json. "Saved your progress. When you come back, we'll 
 }
 ```
 
-**Protocol:** Read at session start. Write after every exercise completion, module completion, and routing decision. Increment `session_count` by 1 on each session start. Read-modify-write (never overwrite entirely). Create directory with `mkdir -p` if missing.
+**Protocol:** Read at session start. Write after every exercise completion, module completion, and routing decision. Read-modify-write (never overwrite entirely). Create directory with `mkdir -p` if missing. Do NOT write to progress.json just to update session_count or other metadata — only write when there's a real progress change (exercise completed, module completed, profile saved). Unnecessary writes create permission prompts that interrupt the learner.
 
 **Progress entries:** `{ "status": "in_progress", "last_exercise": 4 }`. Status values: `not_started`, `in_progress`, `complete`, `skipped`.
 
