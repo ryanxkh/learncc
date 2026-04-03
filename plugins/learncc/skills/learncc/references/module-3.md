@@ -45,11 +45,7 @@ Caveat (deliver even if they don't notice): "You might not see obvious degradati
 
 "Notice how targeted instructions produce a more useful summary. You're telling Claude what matters."
 
-**Power tip:** "You can automate this. Add a section to your CLAUDE.md:"
-```
-# Compact instructions
-When compacting, always preserve: modified file paths, test commands, and the current task goal. Discard: exploration tangents, rejected approaches, and small talk.
-```
+**Power tip:** "You can automate this. Tell Claude: 'Add a Compact instructions section to my CLAUDE.md that says to always preserve the current task goal and discard tangents.' Claude will edit the file for you."
 
 Socratic: "When would you /compact vs /clear? What's the tradeoff?"
 
@@ -95,9 +91,9 @@ Role-adapted practice:
 
 Practice: "Let's try the full cycle. First, /rename this session to something memorable."
 
-"Now I'm going to have you exit Claude Code and come back — this is the ONE exercise in the course that requires leaving. When you press Ctrl+D, your terminal will go back to the normal command line. Don't worry — your conversation is saved. Type `claude --continue` to pick up right where you left off."
+"Now I'm going to have you exit Claude Code and come back — this is the ONE exercise in the course that requires leaving. When you press Ctrl+D, your terminal will go back to the normal command line (the one with `%` or `$` from the beginning). Don't worry — your conversation is saved and your files are untouched."
 
-"Try this now: press Ctrl+D to exit. Then type `claude --continue` in your terminal to come back."
+"Try this now: press Ctrl+D to exit. You'll see your regular terminal prompt. Make sure you're in the same folder, then type `claude --continue` to pick up right where you left off."
 
 (Wait for them to complete the exit/resume cycle.)
 
@@ -109,7 +105,9 @@ Role-adapted examples:
 - PM: "`@meeting-notes-march.md` summarize the key decisions and create action items"
 - Non-technical: "`@budget-q2.csv` what's the total spend for Q2? Which vendor is highest?"
 
-"Try this now: reference a file with `@` and ask Claude something about it. If you have files in your current directory, use one of those. If not, try `@CLAUDE.md` to reference the CLAUDE.md you created in the last module — ask Claude to summarize what's in it."
+"Try this now: type `@CLAUDE.md` followed by 'summarize what's in this file.' Claude will read your CLAUDE.md and respond based on its contents."
+
+"If you have other files in your workspace — documents, spreadsheets, notes — you can reference those too. Just type `@` followed by the filename."
 
 "You can reference multiple files: `@file1.md and @file2.md compare these two documents`"
 
@@ -154,11 +152,12 @@ Skip this exercise. Say: "There's a technique called piping for sending data to 
 #### Exercise 3.11 — Utility Commands (3 min)
 "Three quick tools for getting stuff out of Claude Code:"
 
-**`/copy`** — "Copies Claude's last response to your clipboard. `/copy 3` gets the third-most-recent response. Bonus: press `w` in the picker to write directly to a file instead of the clipboard — useful over SSH where clipboard doesn't work."
+**`/copy`** — "Copies Claude's last response to your clipboard. `/copy 3` gets the third-most-recent response."
+(Developer path only: "Bonus: press `w` in the picker to write directly to a file — useful over SSH.")
 
 **`/export`** — "Saves the entire conversation as a text file. Great for creating handoff documents or archiving useful sessions."
 
-**`Ctrl+O`** — "Toggles the full transcript view. Press `/` to search within it, `n`/`N` to jump between matches, `q` to exit. This is how you find that thing Claude said 20 messages ago."
+**`Ctrl+O`** — "This opens a full-screen transcript view. Press `q` to get back to your conversation. While in there, press `/` to search for something specific, and `n`/`N` to jump between matches. This is how you find that thing Claude said 20 messages ago."
 
 "Try one of these now."
 

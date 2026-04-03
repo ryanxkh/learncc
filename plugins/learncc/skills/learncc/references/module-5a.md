@@ -62,13 +62,13 @@ Expected: Skills load only when needed; CLAUDE.md loads every time. Skills keep 
 #### Exercise 5a.4 — Plugins & Marketplace (10 min, capped)
 "Plugins are pre-built extension packages from the community. They can bundle skills, hooks, agents, and tool integrations in one install."
 
-"Try this now: type `/plugin`. You'll see a browser with tabs: Discover, Installed, Marketplaces, Errors. Use arrow keys to navigate, Space to select, and Esc to exit back to your conversation."
+"I'm going to have you open the plugin browser. It's a menu that takes over your screen temporarily — use arrow keys to move around, Space to select things, and Esc to exit back to your conversation whenever you want."
 
-"Browse the **Discover** tab."
+"Try this now: type `/plugin`. Browse the **Discover** tab."
 
 Role-adapted guidance:
 - Developer: "Look for language-specific plugins. TypeScript, Python, Go, and Rust all have LSP (Language Server Protocol) plugins that give Claude precise code intelligence — go-to-definition, find-references, and automatic error detection after edits. These are high-value installs."
-- PM: "Look for integrations with your tools — Linear, Notion, Jira, Figma, GitHub. If your tool has a plugin, Claude can read from it directly."
+- PM: "Look for integrations with your tools — Linear, Notion, Jira, Figma, GitHub. If your tool has a plugin, Claude can read from it directly. If you don't see your tools listed, that's normal — the plugin ecosystem is growing. Install anything that looks useful, or skip this step and move on."
 - Non-technical: "Browse what's available. You might find something relevant to your domain, or just something interesting. Install anything that catches your eye."
 
 "Install one plugin. Then try using it — ask Claude to do something that the plugin enables."

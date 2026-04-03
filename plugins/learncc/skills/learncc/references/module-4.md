@@ -18,7 +18,7 @@ If the learner is deep in real work, say: "This is great work — you can contin
 Role-adapted nudges:
 - Developer: "Refactor a module into separate files, add tests, and update the imports."
 - PM: "Create a competitive analysis of 5 tools — pricing, features, target market, and a recommendation."
-- Non-technical: "Compare three vendor contracts on pricing, payment terms, insurance, and performance history."
+- Non-technical: "Compare three vendor contracts on pricing, payment terms, insurance, and performance history." (If you don't have contracts as local files, use a hypothetical: "Create a comparison template for three vendor contracts covering pricing, payment terms, insurance, and performance.")
 
 "Try this now: ask Claude to do it directly. No planning. Just describe the task and hit Enter."
 
@@ -73,7 +73,7 @@ Role-adapted verification methods:
 - PM: "After creating the analysis, verify each competitor's current pricing by checking their website. Flag anything that looks outdated."
 - Non-technical: "After generating the report, check that every required section has data. Flag any sections that are empty or seem wrong. Verify the totals add up."
 
-"Try this now: type /clear. Redo the SAME task from Exercise 4.1. But this time, include a verification instruction in your prompt. Start with the task description, then add: 'After you finish, [your verification method]. Fix anything that's wrong.'"
+"Try this now: type /clear (this erases your conversation history so you can start the task fresh — your files are not affected, only the chat). Redo the SAME task from Exercise 4.1. But this time, include a verification instruction in your prompt. Start with the task description, then add: 'After you finish, [your verification method]. Fix anything that's wrong.'"
 
 "Compare this result to the Plan Mode result. Notice the additional quality?"
 
@@ -100,10 +100,11 @@ Socratic: "What question did Claude ask that you hadn't thought about?"
 
 "`/plan` enters Plan Mode directly — alternative to pressing Shift+Tab multiple times. You can also include a description: `/plan redesign the onboarding flow`."
 
-"`/diff` opens an interactive diff viewer. It shows what changed — not just the overall git diff, but per-turn diffs (what changed in each Claude response). Use left/right arrows to switch between views. Press `q` or Esc to exit back to your conversation."
+**DEVELOPER PATH:**
+"`/diff` opens a full-screen diff viewer — press `q` to get back. It shows what changed per turn, not just the overall git diff. Arrow keys to browse. Also: `/pr-comments` fetches GitHub PR review comments as context, and `/security-review` audits for security vulnerabilities."
 
-**DEVELOPER BRANCH:**
-"Two developer-specific commands: `/pr-comments` fetches GitHub PR review comments and loads them as context — Claude can then address each one. `/security-review` audits your pending changes for common security vulnerabilities."
+**PM + NON-TECHNICAL PATH:**
+Skip /diff, /pr-comments, and /security-review — these are developer tools for reviewing code changes. The /plan command above is the key takeaway for you.
 
 #### Module 4 Completion
 

@@ -28,9 +28,9 @@ Analogies by role:
 "For now, let's focus on subagents, which you can start using immediately."
 → **Jump to Exercise 5b.5**
 
-**PM PATH:** Continue with Exercise 5b.2 but use "ask Claude to create" exclusively.
+**PM PATH:** Continue with Exercise 5b.2 (hooks concept + create one via "ask Claude to create"). Skip Exercise 5b.3 (developer-only power features). Do Exercise 5b.4 (verify). Then jump to Exercise 5b.5 (subagents).
 
-**DEVELOPER PATH:** Continue with full exercise sequence.
+**DEVELOPER PATH:** Continue with full exercise sequence (5b.2 → 5b.3 → 5b.4 → 5b.5 → 5b.6 → 5b.7 → 5b.8).
 
 #### Exercise 5b.2 — Create a Hook (12 min, developer + PM paths)
 
@@ -63,11 +63,17 @@ Analogies by role:
 "Modify the command to match your formatter. Then edit any file to trigger it."
 
 **PM PATH:**
-"Tell Claude: 'Set up a hook that [describe what you want to happen automatically]. Have it run after [event].' Claude will create the configuration for you."
+"Hooks fire at specific moments — after Claude edits a file, before Claude finishes a task, when a session starts, etc. You describe what you want in plain English and Claude sets it up."
 
-Role-adapted hook ideas for PMs:
-- "After Claude creates any document, add a 'Last updated: [date]' line at the top"
-- "Before Claude finishes a task, check that the output follows our template structure"
+"Tell Claude something like: 'Create a hook that automatically adds a Last Updated date to the top of any document you create for me.' Claude will handle the technical configuration."
+
+Other PM-relevant hook ideas:
+- "Before you finish any task, verify the output matches our PRD template"
+- "After creating a document, add my name and today's date to the header"
+
+"Try this now: pick one of these or describe your own, and tell Claude to set it up."
+
+After Claude creates it: "Let's test it. Ask Claude to create a short document (any topic). Watch for the hook to fire — you should see a status message in the spinner."
 
 #### Exercise 5b.3 — Hook Power Features (5 min, developer path only)
 
@@ -95,9 +101,11 @@ Role-adapted hook ideas for PMs:
 - When in doubt, use `async: true` so a broken hook doesn't block your work
 
 #### Exercise 5b.4 — Verify Your Hook (2 min, developer + PM paths)
-"Try this now: type `/hooks`. You should see your new hook listed with its event, matcher, and handler."
+"Let's check that your hook is set up. Type `/hooks` — you'll see a list of configured hooks. Press `q` or Esc to exit the viewer."
 
-"Now trigger it — edit a file and confirm the hook ran. You should see the statusMessage in the spinner."
+"Now let's trigger it:"
+- Developer: "Edit a file and watch for the hook's statusMessage in the spinner."
+- PM: "Ask Claude to create a short document. If your hook fires, you'll see a brief status message while Claude works. If nothing happens, that's okay — hooks can be finicky to set up. The concept matters more than getting it perfect on the first try."
 
 **Validation checkpoint (developer path):** Invoke the learncc-validator agent to check the hook config: "Let me check your hook configuration." Relay any findings.
 
@@ -126,10 +134,10 @@ Analogies:
 
 Role-adapted prompts:
 - Developer: "Use a subagent to explore the authentication module and summarize how login flow works."
-- PM: "Use a subagent to read through our last 3 meeting notes and create a consolidated action item list."
-- Non-technical: "Use a subagent to review the files in my Documents folder and tell me what's there."
+- PM: "Use a subagent to research [a topic relevant to your work] and summarize the findings." (Note: subagents work with local files and web searches. If your documents live in Notion or Google Docs, the subagent can't access them directly — but it can research the topic online or analyze any local files you have.)
+- Non-technical: "Use a subagent to review the files in my current folder and tell me what's there."
 
-"Notice: the research happened in a separate context. Check /context — your main conversation barely grew. Only the summary came back to you."
+"Notice: the research happened in a separate context. Run /context (the fuel gauge from Module 3) — your main conversation barely grew. Only the summary came back to you."
 
 Socratic: "Why is this better than just asking Claude to do the research directly?"
 Expected: Direct research fills your context with all the file contents. A subagent keeps that in its own window and returns only the summary.
@@ -141,7 +149,7 @@ Expected: Direct research fills your context with all the file contents. A subag
 
 Role-adapted:
 - Developer: "'Create a subagent called code-reviewer that has read-only access, reviews code for security issues and performance problems, and returns a structured report. Save it to .claude/agents/.'"
-- PM: "'Create a subagent called research-analyst that has read-only access, specializes in competitive research, and returns findings in a structured format. Save it to .claude/agents/.'"
+- PM: "'Create a subagent called research-analyst that has read-only access, specializes in competitive research, and returns findings in a structured format.' (Claude will save it in the right place.)"
 - Non-technical: "'Create a subagent called document-checker that has read-only access, reviews documents for completeness and errors, and returns a summary of issues found. Save it to .claude/agents/.'"
 
 "Once created, you can invoke it by name: 'Use the code-reviewer agent to check this file.'"
