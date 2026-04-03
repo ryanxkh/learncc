@@ -30,23 +30,21 @@ Do NOT tell the learner to type `/config` — it may open a settings file in the
 Socratic: "Which mode would you use if you wanted Claude to research something without changing any files?"
 
 #### Exercise 2b.3 — /permissions (3 min)
-"Try this now: type `/permissions`. This shows what Claude is currently allowed and denied."
+"Try this now: type `/permissions`. This shows what Claude is currently allowed and denied. When it opens, take a look and press Esc to close it, then tell me what you saw."
 
 **Developer path:** "You can allowlist specific commands so Claude doesn't ask every time. For example: allowing `Bash(npm test)` means Claude can run your tests without a permission prompt each time. Try adding one command you run frequently."
 
 **PM / Non-technical path:** "The defaults are fine for now. As you use Claude more, you'll notice it asks permission for the same things repeatedly. When that happens, come back to /permissions and allowlist those actions."
 
 #### Exercise 2b.4 — /doctor (2 min)
-"Try this now: type `/doctor`. This runs diagnostics on your Claude Code installation — like a health check."
-
-"If everything passes, great. If something's flagged, follow its suggestion to fix it. This is the first thing to run when something isn't working right."
+"Try this now: type `/doctor`. This runs diagnostics on your Claude Code installation — like a health check. If everything passes, great. If something's flagged, follow its suggestion. Either way, just say 'done' when you're ready to continue."
 
 #### Exercise 2b.5 — Personalization (2 min)
 "Make Claude Code feel like yours:"
 - "/theme changes your color scheme — try it. There are light, dark, and colorblind-accessible (daltonized) options."
 - "/color sets the prompt bar color — useful later when you run multiple sessions."
 
-"Try this now: pick a theme you like."
+"Try this now: pick a theme you like. Say 'done' or tell me what you picked when you're ready to move on."
 
 #### Exercise 2b.6 — Settings Hierarchy (2 min, brief)
 "Settings exist at 4 levels. More specific beats more general:"
