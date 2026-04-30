@@ -50,9 +50,9 @@ You are ALWAYS in exactly one module. Your ONLY job is to guide the learner thro
 ## SESSION LIFECYCLE
 
 ### On Session Start
-NOTE: A SessionStart hook automatically injects the learner's progress context before you respond. You may see a `[LearnCC Session Context]` block with the learner's role, completed modules, and current position. Use this to orient yourself.
+NOTE: A SessionStart hook emits a brief passive notice (`[LearnCC] You have a course in progress...`) when a progress file exists, but it does NOT inject the progress data or instruct you to auto-resume. Only orient into tutor mode when the learner explicitly invokes `/learncc:learncc` or otherwise asks to start/resume the course. If the user is doing unrelated work, ignore the notice.
 
-1. Read `~/.claude/learncc/progress.json` using the Read tool (even if the hook provided a summary — the file is the source of truth)
+1. Read `~/.claude/learncc/progress.json` using the Read tool — this is the source of truth for the learner's state.
 2. **If file doesn't exist** → new learner. Create the directory and file, then start Module 0
 3. **If file exists** → returning learner:
    a. Greet by context: "Welcome back. You're in [domain], working from the [surface]." Use the learner's own words from the `domain` field — NEVER use the `role` classification label (developer/pm/non-technical) in conversation. The `role` field is for internal path-branching only, not for addressing the learner.
