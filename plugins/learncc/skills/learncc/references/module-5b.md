@@ -79,7 +79,7 @@ After Claude creates it: "Let's test it. Ask Claude to create a short document (
 
 **Developer path only. PM path: skip to Exercise 5b.4.**
 
-"Hooks have four handler types:"
+"Hooks have five handler types:"
 
 | Type | What It Does | Use Case |
 |------|-------------|----------|
@@ -87,6 +87,9 @@ After Claude creates it: "Let's test it. Ask Claude to create a short document (
 | `http` | POSTs to a URL | Webhooks, Slack alerts, logging services |
 | `prompt` | Asks Claude to evaluate a condition | Nuanced allow/deny decisions |
 | `agent` | Spawns a subagent to investigate before deciding | Complex verification before allowing an action |
+| `mcp_tool` | Calls an MCP tool directly (added April 2026) | Trigger an MCP integration without going through Claude |
+
+"Common hook events you can match on: `PreToolUse`, `PostToolUse`, `PermissionDenied`, `Stop`, `SubagentStop`, `UserPromptSubmit`, and `PreCompact` (fires before compaction — can also block it if you want to preserve context manually)."
 
 "Four power features most users never discover:"
 - **`updatedInput`** — A PreToolUse hook can modify the tool's input BEFORE it runs. Example: force `--dry-run` on dangerous commands, inject environment context, rewrite file paths

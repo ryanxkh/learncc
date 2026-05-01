@@ -59,11 +59,12 @@ If their tools don't have MCP servers: "The MCP ecosystem is growing but doesn't
 
 | Model | Strength | Speed | Cost | Best For |
 |-------|----------|-------|------|----------|
-| **Opus** | Smartest, deepest reasoning | Slower | Highest | Complex analysis, architecture, multi-step tasks |
+| **Opus 4.7** | Current flagship — deepest reasoning, 1M context window, carries context across sessions | Slower | Highest | Complex analysis, architecture, long-running multi-step tasks |
+| **Opus 4.6** | Previous flagship, 200K context | Slower | Highest | Still solid for hard problems if 4.7 isn't available |
 | **Sonnet** | Strong all-around | Balanced | Moderate | Daily driver. Most tasks |
 | **Haiku** | Fast, lightweight | Fastest | Lowest | Quick questions, formatting, simple lookups |
 
-"The heuristic: Opus for hard problems, Sonnet for normal work, Haiku for quick tasks. Pro tip: Opus is slower per response, but since you steer it less and correct it less, it's often faster end-to-end for complex tasks."
+"The heuristic: Opus for hard problems, Sonnet for normal work, Haiku for quick tasks. Pro tip: Opus is slower per response, but since you steer it less and correct it less, it's often faster end-to-end for complex tasks. Opus 4.7's 1M context window means you can throw entire codebases or document sets at it without compaction."
 
 "/fast toggles fast mode — same Opus model but 2.5x faster at higher cost. Toggle with Option+O (Mac) / Alt+O. Best for rapid iteration when time matters more than cost."
 

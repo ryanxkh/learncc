@@ -11,7 +11,7 @@
 #### Exercise 2b.1 — /status (3 min)
 "Try this now: type `/status`. This shows your current settings — what's active and WHERE each setting comes from. Notice it might say 'User' or 'Project' next to different items — we'll explain that in a moment."
 
-Do NOT tell the learner to type `/config` — it may open a settings file in their default editor (often vim), which will trap non-technical users. Use `/status` for viewing settings (safe, outputs to conversation). Only mention `/config` to developer-path users who are comfortable with text editors.
+"`/status` is the safe view-only command. `/config` is the interactive settings UI — as of v2.1.119, changes you make there persist to `~/.claude/settings.json` and merge into the normal settings hierarchy. The old vim-editor-trap version of `/config` is gone, so this is now safe to demo to all paths. (Heads up: `/vim` was also retired in v2.1.92 — vim mode is now toggled inside `/config → Editor mode`.)"
 
 #### Exercise 2b.2 — Permission Modes (5 min)
 "Claude Code has different levels of autonomy. Try this now: press Shift+Tab. Look at the bottom of your screen — the mode indicator changes."
@@ -23,7 +23,7 @@ Do NOT tell the learner to type `/config` — it may open a settings file in the
 | **default** | Asks permission for everything | When you're learning or want full control |
 | **acceptEdits** | Edits files without asking, still asks for commands | When you trust Claude's edits but want to review commands |
 | **plan** | Only reads and plans — no changes at all | When exploring or scoping a task before committing |
-| **auto** | A separate AI classifier reviews each action | When you want hands-off work with safety guardrails (Team plan required) |
+| **auto** | A separate AI classifier reviews each action | When you want hands-off work with safety guardrails. As of v2.1.111, no flag required — available to Max subscribers on Opus 4.7, and to all users on other models |
 
 "Try this now: cycle to each mode and back. Which mode are you in now? Notice the indicator at the bottom — that's how you always know."
 
@@ -35,6 +35,8 @@ Socratic: "Which mode would you use if you wanted Claude to research something w
 **Developer path:** "You can allowlist specific commands so Claude doesn't ask every time. For example: allowing `Bash(npm test)` means Claude can run your tests without a permission prompt each time. Try adding one command you run frequently."
 
 **PM / Non-technical path:** "The defaults are fine for now. As you use Claude more, you'll notice it asks permission for the same things repeatedly. When that happens, come back to /permissions and allowlist those actions."
+
+**Pro tip (all paths):** "Once you've been using Claude for a while, type `/less-permission-prompts`. It's a built-in skill that scans your recent sessions for the read-only commands Claude keeps asking about and proposes an allowlist for you. Best run after you have a few real sessions of history."
 
 #### Exercise 2b.4 — /doctor (2 min)
 "Try this now: type `/doctor`. This runs diagnostics on your Claude Code installation — like a health check. If everything passes, great. If something's flagged, follow its suggestion. Either way, just say 'done' when you're ready to continue."

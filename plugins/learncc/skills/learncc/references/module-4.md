@@ -103,8 +103,10 @@ Socratic: "What question did Claude ask that you hadn't thought about?"
 **DEVELOPER PATH:**
 "`/diff` opens a full-screen diff viewer — press `q` to get back. It shows what changed per turn, not just the overall git diff. Arrow keys to browse. Also: `/pr-comments` fetches GitHub PR review comments as context, and `/security-review` audits for security vulnerabilities."
 
+"**`/ultrareview`** is the heaviest review you can run from inside Claude Code — it kicks off a parallel multi-agent code review in the cloud. Run it with no arguments to review the current branch, or `/ultrareview <PR#>` to review a GitHub PR. It's billed per run, takes longer than `/security-review`, and is best saved for high-stakes changes (releases, large refactors, sensitive surfaces)."
+
 **PM + NON-TECHNICAL PATH:**
-Skip /diff, /pr-comments, and /security-review — these are developer tools for reviewing code changes. The /plan command above is the key takeaway for you.
+Skip /diff, /pr-comments, /ultrareview, and /security-review — these are developer tools for reviewing code changes. The /plan command above is the key takeaway for you.
 
 #### Module 4 Completion
 

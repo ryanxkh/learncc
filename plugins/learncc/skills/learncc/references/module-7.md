@@ -116,7 +116,7 @@ Practice: "Name one task you'll keep doing manually from now on, and one task yo
 
 **Role-specific bonus gems:**
 - Developer: "`--from-pr 123` resumes sessions linked to a specific PR. Output styles: set `outputStyle` to `'Explanatory'` for educational mode or `'Learning'` for TODO(human) markers."
-- PM: "/insights generates a usage analysis — how you use Claude, patterns, friction points. /stats shows daily usage and streaks."
+- PM: "/insights generates a usage analysis — how you use Claude, patterns, friction points. /usage shows tokens, cost, and daily streaks (it absorbed the older /cost and /stats commands)."
 - Non-technical: "/stickers orders Claude Code stickers. /mobile shows a QR code to connect the Claude phone app."
 
 #### Exercise 7.6 — Compound Workflow: Put It All Together (10 min)

@@ -84,10 +84,12 @@ Role-adapted practice:
 
 "Your session now has a name — visible in the prompt bar. Three ways to get back to sessions:"
 - `claude --continue` (or `claude -c`) — picks up the most recent session in this directory
-- `claude --resume` (or `claude -r`) — shows a picker of all your sessions. Search, filter, select
+- `claude --resume` (or `claude -r`) — shows a picker of sessions
 - `/resume` from inside Claude Code — switch to a different session
 
-"Pro tip: `--continue` is directory-specific (picks up the last session from THIS folder), while `--resume` shows sessions across all directories. Use `--continue` when you know the project, `--resume` when you're searching."
+"Pro tip: `--continue` always picks up the last session from THIS folder. `--resume` and `/resume` default to the picker for the CURRENT directory — press **Ctrl+A** in the picker to expand to all your sessions across every directory. (This default changed recently — it used to show everything by default, which made the list noisy.)"
+
+"**`/recap`** — when you come back to an existing session after time away, Claude can auto-summarize what happened and where you left off. Type `/recap` to trigger it manually, or configure it to run automatically when you reopen a session via `/config`. Especially useful when you have multiple sessions in flight."
 
 "The rewind feature: press **Esc+Esc** (double-tap Escape). This opens a menu where you can restore your conversation, your code, or both to any previous checkpoint. Every time you send a message, Claude creates a checkpoint. They persist even if you close the terminal."
 
@@ -138,18 +140,21 @@ Skip this exercise. Say: "There's a technique called piping for sending data to 
 #### Exercise 3.10 — /effort and Extended Thinking (3 min)
 "Claude can think harder on complex problems. The `/effort` command controls this."
 
-"Try this now: type `/effort max`. Then ask a complex reasoning question — something with multiple factors to weigh."
+"Try this now: type `/effort`. An interactive slider opens — drag it up and down. Pick `max` for now."
 
-"Now type `/effort low` and ask the same question. Notice the difference in depth?"
+"Then ask a complex reasoning question — something with multiple factors to weigh."
+
+"Now reopen `/effort`, drop it to `low`, and ask the same question. Notice the difference in depth?"
 
 | Level | Best For | Speed | Cost |
 |-------|---------|-------|------|
 | low | Quick formatting, simple lookups | Fastest | Lowest |
-| medium | Standard daily work | Balanced | Balanced |
-| high | Multi-step analysis, debugging | Slower | Higher |
-| max | Complex reasoning, architecture decisions (Opus only) | Slowest | Highest |
+| medium | Lightweight tasks | Balanced | Balanced |
+| high | Standard daily work — current default for most plans | Slower | Higher |
+| xhigh | Hard reasoning on Opus 4.7 (default for Opus 4.7) — falls back to high on other models | Slower still | Higher still |
+| max | Complex reasoning, architecture decisions | Slowest | Highest |
 
-"You can also toggle thinking with Option+T (Mac) / Alt+T (Win/Linux). Use high effort when quality matters, low when speed matters. Note: higher effort levels use more of your usage allowance. Switch back to medium when you're done experimenting. Pro tip: add `\"effortLevel\": \"medium\"` to your settings.json to persist your preferred level across sessions."
+"As of April 2026, the default level is `high` for most users (Pro/Max/Team/Enterprise) and `xhigh` for Opus 4.7 — Anthropic raised the floor because higher effort produced noticeably better results in user testing. You can also toggle extended thinking with Option+T (Mac) / Alt+T (Win/Linux). Note: higher effort levels use more of your usage allowance. Pro tip: add `\"effortLevel\": \"high\"` to your settings.json to lock in a level across sessions."
 
 #### Exercise 3.11 — Utility Commands (3 min)
 "Three quick tools for getting stuff out of Claude Code:"

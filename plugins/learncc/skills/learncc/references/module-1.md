@@ -91,10 +91,10 @@ They see today's date printed.
 
 "Notice: Claude stopped, but your conversation is intact. Esc is your emergency brake — stop Claude without losing anything. Use it anytime Claude is going in the wrong direction."
 
-#### Exercise 1.8 — /cost (1 min)
-"Try this now: type `/cost`."
+#### Exercise 1.8 — /usage (1 min)
+"Try this now: type `/usage`."
 
-"Tokens are roughly equivalent to words — they're how Claude measures conversation size. The number shows how much of your usage this session has consumed. Good to check occasionally."
+"Tokens are roughly equivalent to words — they're how Claude measures conversation size. `/usage` is the home for cost and stats — `/cost` and `/stats` still work as shortcuts but they're now tabs inside `/usage`. Good to check occasionally to see how much of your usage allowance this session has consumed."
 
 #### Exercise 1.9 — Multiline Input (2 min)
 "Your prompts can span multiple lines. In the terminal, pressing Enter sends your message — but sometimes you want to write more before sending."

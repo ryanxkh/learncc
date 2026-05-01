@@ -6,7 +6,7 @@ IMPORTANT: When pushing changes to the plugin (any file under `plugins/learncc/`
    - `plugins/learncc/.claude-plugin/plugin.json`
    - `.claude-plugin/marketplace.json`
 2. Claude Code uses version numbers to detect updates. If the version doesn't change, users won't see the update.
-3. Current version: 1.6.1
+3. Current version: 1.7.0
 
 ## Project Structure
 - `plugins/learncc/` — the plugin (skills, hooks, agents, examples)
@@ -51,12 +51,21 @@ These are rules embedded in SKILL.md that came from real user testing. Do not re
 10. **Exit instructions on every TUI.** Any command that opens a TUI (/plugin, /diff, /hooks, Ctrl+O) must include how to exit (q, Esc) BEFORE or alongside the command, not buried after.
 
 ## Content Accuracy
-- Shift+Tab cycle: `default → acceptEdits → plan → auto` (auto requires Team plan + flag)
+- Shift+Tab cycle: `default → acceptEdits → plan → auto`. Auto mode no longer requires the `--enable-auto-mode` flag (removed in v2.1.111). It's a standard mode for Max subscribers on Opus 4.7 and available to all users on other models.
+- Default effort level is `high` (raised from `medium` for most plans in v2.1.94 and v2.1.117). Opus 4.7 defaults to `xhigh`. The full ladder is: low → medium → high → xhigh → max.
+- Opus 4.7 is the current flagship (shipped Apr 16, 2026, v2.1.111). 1M context window, carries context across sessions.
+- `/usage` is the home for cost and stats. `/cost` and `/stats` are now tabs/aliases inside `/usage`.
+- `/recap` (v2.1.108) summarizes where you left off when returning to a session.
+- `/resume` and the picker now default to the CURRENT directory; press Ctrl+A to expand to all sessions.
+- `/ultrareview` (v2.1.111) runs a parallel multi-agent cloud code review.
+- `/less-permission-prompts` is now a bundled skill that proposes an allowlist from your session history.
+- `/vim` was removed in v2.1.92 — vim mode toggles via `/config → Editor mode`.
+- `/config` is no longer an editor trap as of v2.1.119 — it's an interactive UI that persists to settings.json. `/status` remains the safest read-only view.
+- Hooks: `PreCompact` event added (v2.1.105). Hooks now support a `mcp_tool` action type (v2.1.118).
 - Plan mode context clearing: OFFERED as an option, not automatic
 - Voice (/voice): native built-in since v2.1.69, not third-party
 - Community thresholds (70/85/90): community-reported, NOT official Anthropic metrics. Always attribute.
 - /loop: bundled skill, not a native command
-- /config: opens $EDITOR (vim trap) — use /status instead for non-technical users
 
 ## Brand Guidelines
 Full Anthropic-adjacent brand guide at `docs/BRAND-GUIDELINES.md`. Key rule: never use pure white (#FFFFFF) or pure black (#000000). Use warm cream (#FAF9F5) and warm charcoal (#141413). Accent: terra cotta (#D97757).
